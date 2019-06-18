@@ -4,6 +4,7 @@
 https://zpl.io/bJGgKY3
 
 
+
 After next Football arena’s  scheduling  scenario :
 
 Every arena has 8 tickets per day representing 8 hours of playing  (ticket 6 , 7 , 8pm…,2 am) 

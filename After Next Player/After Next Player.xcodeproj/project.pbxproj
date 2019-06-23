@@ -15,10 +15,6 @@
 		77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6803122BF7B6500A99AAC /* AppDelegate.swift */; };
 		77C6803722BF7B6500A99AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803522BF7B6500A99AAC /* Main.storyboard */; };
 		77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */; };
-		77C6804722BF7DA500A99AAC /* AllBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6804522BF7DA500A99AAC /* AllBookingsViewController.swift */; };
-		77C6804822BF7DA500A99AAC /* AllBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C6804622BF7DA500A99AAC /* AllBookingsViewController.xib */; };
-		77C6804B22BF7EE400A99AAC /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */; };
-		77C6804C22BF7EE400A99AAC /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C6804A22BF7EE400A99AAC /* BookingsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +45,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CF2A7FF22BF9AEC00B18570 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0CF2A80122BF9B1100B18570 /* Home Scene */,
+				0CF2A80022BF9AF800B18570 /* Bookings Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0CF2A80022BF9AF800B18570 /* Bookings Scene */ = {
+			isa = PBXGroup;
+			children = (
+				77C6804522BF7DA500A99AAC /* AllBookingsViewController.swift */,
+				77C6804622BF7DA500A99AAC /* AllBookingsViewController.xib */,
+				77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */,
+				77C6804A22BF7EE400A99AAC /* BookingsTableViewCell.xib */,
+			);
+			path = "Bookings Scene";
+			sourceTree = "<group>";
+		};
+		0CF2A80122BF9B1100B18570 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */,
+				0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */,
+				0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */,
+				0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
 		77C6802522BF7B6500A99AAC = {
 			isa = PBXGroup;
 			children = (
@@ -68,20 +95,12 @@
 		77C6803022BF7B6500A99AAC /* After Next Player */ = {
 			isa = PBXGroup;
 			children = (
+				0CF2A7FF22BF9AEC00B18570 /* Scenes */,
 				0CF2A7F522BF7F0800B18570 /* Assets.xcassets */,
 				77C6803122BF7B6500A99AAC /* AppDelegate.swift */,
 				77C6803522BF7B6500A99AAC /* Main.storyboard */,
-				77C6804522BF7DA500A99AAC /* AllBookingsViewController.swift */,
-				77C6804622BF7DA500A99AAC /* AllBookingsViewController.xib */,
-				77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */,
-				77C6804A22BF7EE400A99AAC /* BookingsTableViewCell.xib */,
-				77C6803822BF7B6600A99AAC /* Assets.xcassets */,
 				77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */,
 				77C6803D22BF7B6600A99AAC /* Info.plist */,
-				0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */,
-				0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */,
-				0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */,
-				0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */,
 			);
 			path = "After Next Player";
 			sourceTree = "<group>";

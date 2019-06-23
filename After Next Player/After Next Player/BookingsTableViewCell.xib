@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingsTableViewCell" rowHeight="141" id="KGk-i7-Jjw" customClass="BookingsTableViewCell" customModule="After_Next_Player" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="445" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="445" height="140.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W07-B9-bGd">
+                        <rect key="frame" x="10" y="10" width="425" height="120.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-mY-1La">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="120.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-8x-iP7">
+                                        <rect key="frame" x="27.5" y="49" width="15.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
+                                        <color key="textColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiF-RY-Lby">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="120.5"/>
+                                        <color key="backgroundColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yiF-RY-Lby" secondAttribute="bottom" id="0eo-wI-fsk"/>
+                                    <constraint firstAttribute="trailing" secondItem="yiF-RY-Lby" secondAttribute="trailing" id="1Jv-GT-k4l"/>
+                                    <constraint firstItem="xFa-8x-iP7" firstAttribute="centerX" secondItem="BTJ-mY-1La" secondAttribute="centerX" id="All-KA-lBZ"/>
+                                    <constraint firstItem="xFa-8x-iP7" firstAttribute="centerY" secondItem="BTJ-mY-1La" secondAttribute="centerY" id="MhS-OV-LSu"/>
+                                    <constraint firstAttribute="width" constant="70" id="Qsa-LZ-sB7"/>
+                                    <constraint firstItem="yiF-RY-Lby" firstAttribute="leading" secondItem="BTJ-mY-1La" secondAttribute="leading" id="iKZ-U9-TGO"/>
+                                    <constraint firstItem="yiF-RY-Lby" firstAttribute="top" secondItem="BTJ-mY-1La" secondAttribute="top" id="yLZ-TQ-ay3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borg el arab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-vW-vvT">
+                                <rect key="frame" x="90" y="40.5" width="80" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="RQf-op-8l1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2406 E 8th St, Alexandria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-kX-cy7">
+                                <rect key="frame" x="90" y="65.5" width="153.5" height="12"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4q-E1-FKS">
+                                <rect key="frame" x="373.5" y="54.5" width="36.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BTJ-mY-1La" firstAttribute="top" secondItem="W07-B9-bGd" secondAttribute="top" id="8jF-nJ-lUi"/>
+                            <constraint firstAttribute="trailing" secondItem="u4q-E1-FKS" secondAttribute="trailing" constant="15" id="B6P-iF-BoG"/>
+                            <constraint firstAttribute="bottom" secondItem="BTJ-mY-1La" secondAttribute="bottom" id="BAD-Ou-lR1"/>
+                            <constraint firstItem="KxD-vW-vvT" firstAttribute="centerY" secondItem="W07-B9-bGd" secondAttribute="centerY" constant="-10" id="DDD-UU-sfh"/>
+                            <constraint firstItem="BTJ-mY-1La" firstAttribute="leading" secondItem="W07-B9-bGd" secondAttribute="leading" id="JgI-Qa-RBd"/>
+                            <constraint firstItem="u4q-E1-FKS" firstAttribute="centerY" secondItem="W07-B9-bGd" secondAttribute="centerY" id="ej5-nI-Qtr"/>
+                            <constraint firstItem="s0A-kX-cy7" firstAttribute="top" secondItem="KxD-vW-vvT" secondAttribute="bottom" constant="5" id="fxC-u6-7D0"/>
+                            <constraint firstItem="s0A-kX-cy7" firstAttribute="leading" secondItem="KxD-vW-vvT" secondAttribute="leading" id="ipL-Q3-G8m"/>
+                            <constraint firstItem="KxD-vW-vvT" firstAttribute="leading" secondItem="BTJ-mY-1La" secondAttribute="trailing" constant="20" id="ug1-sL-8YH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="W07-B9-bGd" secondAttribute="trailing" constant="10" id="Jex-eH-sCI"/>
+                    <constraint firstItem="W07-B9-bGd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cs0-0H-gKr"/>
+                    <constraint firstItem="W07-B9-bGd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eAN-5q-btk"/>
+                    <constraint firstAttribute="bottom" secondItem="W07-B9-bGd" secondAttribute="bottom" constant="10" id="ood-KS-cye"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="W07-B9-bGd" id="vk5-Hv-uIH"/>
+                <outlet property="timeSquare" destination="yiF-RY-Lby" id="e4J-KI-8xR"/>
+            </connections>
+            <point key="canvasLocation" x="228.2608695652174" y="155.02232142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

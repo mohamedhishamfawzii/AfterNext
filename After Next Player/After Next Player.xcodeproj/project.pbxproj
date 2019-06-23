@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CF2A7F622BF7F0800B18570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F522BF7F0800B18570 /* Assets.xcassets */; };
+		0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */; };
+		0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */; };
+		0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */; };
+		0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */; };
 		77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6803122BF7B6500A99AAC /* AppDelegate.swift */; };
 		77C6803722BF7B6500A99AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803522BF7B6500A99AAC /* Main.storyboard */; };
-		77C6803922BF7B6600A99AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803822BF7B6600A99AAC /* Assets.xcassets */; };
 		77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF2A7F522BF7F0800B18570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHomeView.swift; sourceTree = "<group>"; };
+		0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerHomeView.xib; sourceTree = "<group>"; };
+		0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenasCollectionViewCell.swift; sourceTree = "<group>"; };
+		0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArenasCollectionViewCell.xib; sourceTree = "<group>"; };
 		77C6802E22BF7B6500A99AAC /* After Next Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "After Next Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C6803122BF7B6500A99AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C6803622BF7B6500A99AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77C6803822BF7B6600A99AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77C6803B22BF7B6600A99AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C6803D22BF7B6600A99AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,11 +60,15 @@
 		77C6803022BF7B6500A99AAC /* After Next Player */ = {
 			isa = PBXGroup;
 			children = (
+				0CF2A7F522BF7F0800B18570 /* Assets.xcassets */,
 				77C6803122BF7B6500A99AAC /* AppDelegate.swift */,
 				77C6803522BF7B6500A99AAC /* Main.storyboard */,
-				77C6803822BF7B6600A99AAC /* Assets.xcassets */,
 				77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */,
 				77C6803D22BF7B6600A99AAC /* Info.plist */,
+				0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */,
+				0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */,
+				0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */,
+				0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */,
 			);
 			path = "After Next Player";
 			sourceTree = "<group>";
@@ -119,8 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */,
+				0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */,
 				77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */,
-				77C6803922BF7B6600A99AAC /* Assets.xcassets in Resources */,
+				0CF2A7F622BF7F0800B18570 /* Assets.xcassets in Resources */,
 				77C6803722BF7B6500A99AAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */,
+				0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */,
 				77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

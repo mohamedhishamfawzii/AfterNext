@@ -12,6 +12,7 @@ class PlayerHomeView: UIViewController {
     @IBOutlet weak var locationSearchBar: UISearchBar!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var bookingsTableView: UITableView!
+    @IBOutlet var seeAllButtons: [UIButton]!
     @IBOutlet weak var arenasCollectionView: UICollectionView!
     let tableViewCellNib = UINib(nibName: "BookingsTableViewCell", bundle: nil)
     let tableViewCellReuseId = "BookingsTableViewCell"
@@ -45,7 +46,16 @@ class PlayerHomeView: UIViewController {
     func configCollectionView(){
         arenasCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: collectionViewCellReuseId)
     }
+    
+    @IBAction func seeAllBookingsTapped(_ sender: Any) {
+        let allBookingsVC = AllBookingsViewController()
+        self.navigationController?.pushViewController(allBookingsVC, animated: true)
+    }
 
+    @IBAction func seeAllArenasTapped(_ sender: Any) {
+        let allArenasVC = ArenasViewController()
+        self.navigationController?.pushViewController(allArenasVC, animated: true)
+    }
 }
 
 extension PlayerHomeView:UITableViewDelegate,UITableViewDataSource{

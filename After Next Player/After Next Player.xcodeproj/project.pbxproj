@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C8DB2EC22BFBF7300255EB7 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */; };
-		0C8DB2EE22BFC0EE00255EB7 /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8DB2ED22BFC0EE00255EB7 /* BookingsTableViewCell.xib */; };
+		0C8DB2F622C0DBC500255EB7 /* ArenasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DB2F422C0DBC500255EB7 /* ArenasViewController.swift */; };
+		0C8DB2F722C0DBC500255EB7 /* ArenasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8DB2F522C0DBC500255EB7 /* ArenasViewController.xib */; };
+		0C8DB2FC22C0E88200255EB7 /* AllBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8DB2F822C0E88200255EB7 /* AllBookingsViewController.xib */; };
+		0C8DB2FD22C0E88200255EB7 /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8DB2F922C0E88200255EB7 /* BookingsTableViewCell.xib */; };
+		0C8DB2FE22C0E88200255EB7 /* AllBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DB2FA22C0E88200255EB7 /* AllBookingsViewController.swift */; };
+		0C8DB2FF22C0E88200255EB7 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DB2FB22C0E88200255EB7 /* BookingsTableViewCell.swift */; };
 		0CF2A7F622BF7F0800B18570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F522BF7F0800B18570 /* Assets.xcassets */; };
 		0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */; };
 		0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */; };
@@ -21,7 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C8DB2ED22BFC0EE00255EB7 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
+		0C8DB2F422C0DBC500255EB7 /* ArenasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenasViewController.swift; sourceTree = "<group>"; };
+		0C8DB2F522C0DBC500255EB7 /* ArenasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArenasViewController.xib; sourceTree = "<group>"; };
+		0C8DB2F822C0E88200255EB7 /* AllBookingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllBookingsViewController.xib; sourceTree = "<group>"; };
+		0C8DB2F922C0E88200255EB7 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
+		0C8DB2FA22C0E88200255EB7 /* AllBookingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBookingsViewController.swift; sourceTree = "<group>"; };
+		0C8DB2FB22C0E88200255EB7 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsTableViewCell.swift; sourceTree = "<group>"; };
 		0CF2A7F522BF7F0800B18570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CF2A7F722BF7F7700B18570 /* PlayerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHomeView.swift; sourceTree = "<group>"; };
 		0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerHomeView.xib; sourceTree = "<group>"; };
@@ -33,9 +42,6 @@
 		77C6803622BF7B6500A99AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77C6803B22BF7B6600A99AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C6803D22BF7B6600A99AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77C6804522BF7DA500A99AAC /* AllBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBookingsViewController.swift; sourceTree = "<group>"; };
-		77C6804622BF7DA500A99AAC /* AllBookingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllBookingsViewController.xib; sourceTree = "<group>"; };
-		77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewCell.swift; sourceTree = "<group>"; };
 		AA102349884E8FCB39A5BE23 /* Pods_After_Next_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_After_Next_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF88327AEEB90DDE46418D6B /* Pods-After Next Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Player/Pods-After Next Player.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,9 +58,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8DB2F322C0DBA200255EB7 /* Arenas Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0C8DB2F422C0DBC500255EB7 /* ArenasViewController.swift */,
+				0C8DB2F522C0DBC500255EB7 /* ArenasViewController.xib */,
+			);
+			path = "Arenas Scene";
+			sourceTree = "<group>";
+		};
 		0CF2A7FF22BF9AEC00B18570 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0C8DB2F322C0DBA200255EB7 /* Arenas Scene */,
 				0CF2A80122BF9B1100B18570 /* Home Scene */,
 				0CF2A80022BF9AF800B18570 /* Bookings Scene */,
 			);
@@ -64,10 +80,10 @@
 		0CF2A80022BF9AF800B18570 /* Bookings Scene */ = {
 			isa = PBXGroup;
 			children = (
-				77C6804922BF7EE400A99AAC /* BookingsTableViewCell.swift */,
-				0C8DB2ED22BFC0EE00255EB7 /* BookingsTableViewCell.xib */,
-				77C6804522BF7DA500A99AAC /* AllBookingsViewController.swift */,
-				77C6804622BF7DA500A99AAC /* AllBookingsViewController.xib */,
+				0C8DB2FA22C0E88200255EB7 /* AllBookingsViewController.swift */,
+				0C8DB2F822C0E88200255EB7 /* AllBookingsViewController.xib */,
+				0C8DB2FB22C0E88200255EB7 /* BookingsTableViewCell.swift */,
+				0C8DB2F922C0E88200255EB7 /* BookingsTableViewCell.xib */,
 			);
 			path = "Bookings Scene";
 			sourceTree = "<group>";
@@ -192,9 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */,
+				0C8DB2FD22C0E88200255EB7 /* BookingsTableViewCell.xib in Resources */,
+				0C8DB2FC22C0E88200255EB7 /* AllBookingsViewController.xib in Resources */,
 				0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */,
 				77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */,
-				0C8DB2EE22BFC0EE00255EB7 /* BookingsTableViewCell.xib in Resources */,
+				0C8DB2F722C0DBC500255EB7 /* ArenasViewController.xib in Resources */,
 				0CF2A7F622BF7F0800B18570 /* Assets.xcassets in Resources */,
 				77C6803722BF7B6500A99AAC /* Main.storyboard in Resources */,
 			);
@@ -254,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8DB2FE22C0E88200255EB7 /* AllBookingsViewController.swift in Sources */,
+				0C8DB2FF22C0E88200255EB7 /* BookingsTableViewCell.swift in Sources */,
+				0C8DB2F622C0DBC500255EB7 /* ArenasViewController.swift in Sources */,
 				0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */,
-				0C8DB2EC22BFBF7300255EB7 /* BookingsTableViewCell.swift in Sources */,
 				0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */,
 				77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */,
 			);

@@ -9,9 +9,21 @@
 import UIKit
 
 class ArenasCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var cellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        config()
+    }
+    
+    func config(){
+        cellView.layer.cornerRadius=5
+        cellView.layer.shadowRadius = 0.3
+        cellView.layer.shadowColor=UIColor(red: 229/255, green: 236/255, blue: 237/255, alpha: 1).cgColor
+        cellView.layer.shadowOpacity = 1
+        cellView.layer.shadowOffset = CGSize(width: 1, height: 3)
+        //cellView.layer.borderColor=UIColor.gray.cgColor
+        cellView.layer.borderWidth=0.05
     }
 
 }

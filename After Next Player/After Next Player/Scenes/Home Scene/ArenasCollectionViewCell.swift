@@ -10,12 +10,16 @@ import UIKit
 
 class ArenasCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var star1Button: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
     }
     
+    @IBAction func starTapped(_ sender: Any) {
+        
+    }
     func config(){
         cellView.layer.cornerRadius=5
         cellView.layer.shadowRadius = 0.3

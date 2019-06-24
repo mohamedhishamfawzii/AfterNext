@@ -38,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0C-pk-r2a" userLabel="searchView">
-                    <rect key="frame" x="21" y="202" width="372" height="56"/>
+                    <rect key="frame" x="21" y="202" width="372" height="65"/>
                     <subviews>
                         <searchBar contentMode="redraw" placeholder="  eg: New Cairo" translatesAutoresizingMaskIntoConstraints="NO" id="RyG-DL-NFf">
                             <rect key="frame" x="8" y="0.0" width="356" height="56"/>
@@ -66,7 +66,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="63X-1C-PZj">
-                    <rect key="frame" x="21" y="345" width="372" height="170"/>
+                    <rect key="frame" x="21" y="344" width="372" height="170"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="170" id="iEV-yR-m2b"/>
@@ -77,13 +77,13 @@
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arenas near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-L0-edf">
-                    <rect key="frame" x="21" y="520" width="124" height="21"/>
+                    <rect key="frame" x="21" y="526" width="124" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J28-99-DR9">
-                    <rect key="frame" x="21" y="562" width="364" height="279"/>
+                    <rect key="frame" x="21" y="568" width="364" height="273"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Fo-rG-Gsh">
                         <size key="itemSize" width="50" height="50"/>
@@ -103,14 +103,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J28-99-DR9" secondAttribute="bottom" constant="21" id="5nd-TY-KB7"/>
                 <constraint firstItem="Q0C-pk-r2a" firstAttribute="leading" secondItem="mdN-OU-cp6" secondAttribute="leading" id="78j-cG-gDW"/>
                 <constraint firstItem="J28-99-DR9" firstAttribute="leading" secondItem="tW6-L0-edf" secondAttribute="leading" id="8KP-wb-qj9"/>
-                <constraint firstItem="abz-xY-6ED" firstAttribute="top" secondItem="Q0C-pk-r2a" secondAttribute="bottom" constant="44" id="9Rl-1E-6ld"/>
+                <constraint firstItem="abz-xY-6ED" firstAttribute="top" secondItem="Q0C-pk-r2a" secondAttribute="bottom" constant="35" id="9Rl-1E-6ld"/>
                 <constraint firstItem="jYe-AU-jCM" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IGV-LV-Gpl"/>
                 <constraint firstItem="mdN-OU-cp6" firstAttribute="top" secondItem="jYe-AU-jCM" secondAttribute="bottom" constant="36" id="J4y-DC-TxX"/>
-                <constraint firstItem="63X-1C-PZj" firstAttribute="top" secondItem="abz-xY-6ED" secondAttribute="bottom" constant="22" id="Nos-It-SFY"/>
+                <constraint firstItem="63X-1C-PZj" firstAttribute="top" secondItem="abz-xY-6ED" secondAttribute="bottom" constant="21" id="Nos-It-SFY"/>
                 <constraint firstItem="tW6-L0-edf" firstAttribute="leading" secondItem="mdN-OU-cp6" secondAttribute="leading" id="Sql-FN-FVg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q0C-pk-r2a" secondAttribute="trailing" constant="21" id="W47-yM-wNe"/>
                 <constraint firstItem="abz-xY-6ED" firstAttribute="leading" secondItem="mdN-OU-cp6" secondAttribute="leading" id="Yhw-4M-gyo"/>
-                <constraint firstItem="tW6-L0-edf" firstAttribute="top" secondItem="63X-1C-PZj" secondAttribute="bottom" constant="5" id="Z7r-PL-Eak"/>
+                <constraint firstItem="tW6-L0-edf" firstAttribute="top" secondItem="63X-1C-PZj" secondAttribute="bottom" constant="12" id="Z7r-PL-Eak"/>
                 <constraint firstItem="Q0C-pk-r2a" firstAttribute="trailing" secondItem="63X-1C-PZj" secondAttribute="trailing" id="ZNY-2P-ScM"/>
                 <constraint firstItem="jYe-AU-jCM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="aS0-Sa-1JP"/>
                 <constraint firstItem="abz-xY-6ED" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="302" id="gnv-0w-Yeo"/>

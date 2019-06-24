@@ -38,52 +38,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-P6-yCH" userLabel="ratingStackView">
-                                <rect key="frame" x="20" y="116.5" width="133" height="12"/>
+                                <rect key="frame" x="20" y="116.5" width="181" height="20"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pb5-Rj-Nq2" userLabel="starsStackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="12"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-oW-xxc">
-                                                <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="12" id="aU0-RN-yLt"/>
-                                                    <constraint firstAttribute="width" constant="12" id="ycW-Cf-fFt"/>
-                                                </constraints>
-                                                <state key="normal" image="ratingStar"/>
-                                                <connections>
-                                                    <action selector="starTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nFh-34-udT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPf-Q2-Ld4">
-                                                <rect key="frame" x="15" y="0.0" width="12" height="12"/>
-                                                <state key="normal" image="ratingStar"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c93-kN-0Id">
-                                                <rect key="frame" x="30" y="0.0" width="12" height="12"/>
-                                                <state key="normal" image="ratingStar"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-7E-hTO">
-                                                <rect key="frame" x="45" y="0.0" width="12" height="12"/>
-                                                <state key="normal" image="ratingStar"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyc-lO-T9l">
-                                                <rect key="frame" x="60" y="0.0" width="12" height="12"/>
-                                                <state key="normal" image="ratingStar"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Zyc-lO-T9l" firstAttribute="height" secondItem="MTN-oW-xxc" secondAttribute="height" id="03x-Fv-w0K"/>
-                                            <constraint firstItem="c93-kN-0Id" firstAttribute="height" secondItem="MTN-oW-xxc" secondAttribute="height" id="4rw-bb-y1e"/>
-                                            <constraint firstItem="RPf-Q2-Ld4" firstAttribute="width" secondItem="MTN-oW-xxc" secondAttribute="width" id="Bjv-hX-ryS"/>
-                                            <constraint firstItem="RPf-Q2-Ld4" firstAttribute="height" secondItem="MTN-oW-xxc" secondAttribute="height" id="aPd-hB-iJ7"/>
-                                            <constraint firstItem="Zyc-lO-T9l" firstAttribute="width" secondItem="MTN-oW-xxc" secondAttribute="width" id="dpA-hf-9rl"/>
-                                            <constraint firstItem="rtg-7E-hTO" firstAttribute="height" secondItem="MTN-oW-xxc" secondAttribute="height" id="nCj-Nz-FUV"/>
-                                            <constraint firstItem="rtg-7E-hTO" firstAttribute="width" secondItem="MTN-oW-xxc" secondAttribute="width" id="ntU-eH-foD"/>
-                                            <constraint firstItem="c93-kN-0Id" firstAttribute="width" secondItem="MTN-oW-xxc" secondAttribute="width" id="wsy-Q7-NPf"/>
-                                        </constraints>
-                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZW-YC-cTa" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(13 ratings)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-Ug-XFt">
-                                        <rect key="frame" x="82" y="0.0" width="51" height="12"/>
+                                        <rect key="frame" x="130" y="0.0" width="51" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                         <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -116,13 +83,12 @@
             <size key="customSize" width="373" height="293"/>
             <connections>
                 <outlet property="cellView" destination="W8p-QI-jtK" id="3LS-l5-Jj1"/>
-                <outlet property="star1Button" destination="MTN-oW-xxc" id="D86-PU-lP7"/>
+                <outlet property="ratingStarsView" destination="9ZW-YC-cTa" id="P29-q4-LH2"/>
             </connections>
             <point key="canvasLocation" x="371.73913043478262" y="216.62946428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="group3" width="33" height="31"/>
-        <image name="ratingStar" width="12" height="11"/>
     </resources>
 </document>

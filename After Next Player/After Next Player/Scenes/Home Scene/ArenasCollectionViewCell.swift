@@ -7,20 +7,19 @@
 //
 
 import UIKit
+import Cosmos
 
 class ArenasCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellView: UIView!
-    @IBOutlet weak var star1Button: UIButton!
+    @IBOutlet weak var ratingStarsView: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
     }
     
-    @IBAction func starTapped(_ sender: Any) {
-        
-    }
     func config(){
+        ratingStarsView.rating = 0
         cellView.layer.cornerRadius=5
         cellView.layer.shadowRadius = 0.3
         cellView.layer.shadowColor=UIColor(red: 229/255, green: 236/255, blue: 237/255, alpha: 1).cgColor

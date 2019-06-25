@@ -7,10 +7,14 @@
 //
 
 import UIKit
-
+import Firebase
 class AddArenasViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var priceTextfield: UITextField!
     @IBOutlet weak var fieldsView: UIView!
+    var location = "new cairo"
     override func viewDidLoad() {
         super.viewDidLoad()
         fieldsView.layer.shadowRadius = 0.3
@@ -25,11 +29,32 @@ class AddArenasViewController: UIViewController {
 
     @IBAction func addClicked(_ sender: Any) {
         print("add clicked")
+        Firestore.firestore().collection("Arenas").addDocument(data: ["Name":nameTextField.text,"location":location,"price":priceTextfield.text,"Rating":2]) {
+            
+            (err)in
+            if let err = err{
+                print(err)
+            }
+            else{
+                let alert = UIAlertController(title: "Added Successfully", message: "Your Arena has been added , you can add another Arena", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+                self.priceTextfield.text=""
+                self.nameTextField.text=""
+                
+                
+                
+            }
+        }
     }
     
  
      @IBAction func finishPressed(_ sender: Any) {
          print("finish clicked")
+        let scanVC = AdminScanViewController()
+        self.navigationController?.pushViewController(scanVC, animated: true)
      }
     
 

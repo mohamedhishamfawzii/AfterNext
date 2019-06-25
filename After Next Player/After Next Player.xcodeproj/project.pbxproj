@@ -18,6 +18,9 @@
 		0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */; };
 		0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */; };
 		0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */; };
+		77A3727322C2284600B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727222C2284500B68531 /* GoogleService-Info.plist */; };
+		77A3727522C2319500B68531 /* Arena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727422C2319500B68531 /* Arena.swift */; };
+		77A3727722C2563100B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727622C2563100B68531 /* Booking.swift */; };
 		77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6803122BF7B6500A99AAC /* AppDelegate.swift */; };
 		77C6803722BF7B6500A99AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803522BF7B6500A99AAC /* Main.storyboard */; };
 		77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */; };
@@ -37,6 +40,9 @@
 		0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenasCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArenasCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B4CDA05E7F91571E926751A /* Pods-After Next Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Player/Pods-After Next Player.debug.xcconfig"; sourceTree = "<group>"; };
+		77A3727222C2284500B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77A3727422C2319500B68531 /* Arena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
+		77A3727622C2563100B68531 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		77C6802E22BF7B6500A99AAC /* After Next Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "After Next Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C6803122BF7B6500A99AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C6803622BF7B6500A99AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,9 +114,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		77A3727822C2563900B68531 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77A3727422C2319500B68531 /* Arena.swift */,
+				77A3727622C2563100B68531 /* Booking.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		77C6802522BF7B6500A99AAC = {
 			isa = PBXGroup;
 			children = (
+				77A3727222C2284500B68531 /* GoogleService-Info.plist */,
 				77C6803022BF7B6500A99AAC /* After Next Player */,
 				77C6802F22BF7B6500A99AAC /* Products */,
 				2793C80D708F7D25ADACD4C4 /* Pods */,
@@ -135,6 +151,7 @@
 				77C6803522BF7B6500A99AAC /* Main.storyboard */,
 				77C6803A22BF7B6600A99AAC /* LaunchScreen.storyboard */,
 				77C6803D22BF7B6600A99AAC /* Info.plist */,
+				77A3727822C2563900B68531 /* Model */,
 			);
 			path = "After Next Player";
 			sourceTree = "<group>";
@@ -209,6 +226,7 @@
 			files = (
 				0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */,
 				0C8DB2FD22C0E88200255EB7 /* BookingsTableViewCell.xib in Resources */,
+				77A3727322C2284600B68531 /* GoogleService-Info.plist in Resources */,
 				0C8DB2FC22C0E88200255EB7 /* AllBookingsViewController.xib in Resources */,
 				0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */,
 				77C6803C22BF7B6600A99AAC /* LaunchScreen.storyboard in Resources */,
@@ -252,13 +270,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-After Next Player/Pods-After Next Player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8DB2FE22C0E88200255EB7 /* AllBookingsViewController.swift in Sources */,
+				77A3727722C2563100B68531 /* Booking.swift in Sources */,
 				0C8DB2FF22C0E88200255EB7 /* BookingsTableViewCell.swift in Sources */,
+				77A3727522C2319500B68531 /* Arena.swift in Sources */,
 				0C8DB2F622C0DBC500255EB7 /* ArenasViewController.swift in Sources */,
 				0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */,
 				0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */,

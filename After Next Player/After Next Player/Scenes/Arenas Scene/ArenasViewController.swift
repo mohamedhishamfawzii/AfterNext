@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ArenasViewController: UIViewController {
     @IBOutlet weak var searchView: UIView!
@@ -14,12 +15,15 @@ class ArenasViewController: UIViewController {
     @IBOutlet weak var arenasCollectionView: UICollectionView!
     let collectionViewCellNib = UINib(nibName: "ArenasCollectionViewCell", bundle: nil)
     let collectionViewCellReuseId = "ArenasCollectionViewCell"
-    
+    var arenas:[Arena] = []
+     var collectionRef:CollectionReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        getArenas()
+    }
     func config(){
         let v = arenaSearchBar.subviews.first!.subviews[0]
         v.removeFromSuperview()
@@ -32,6 +36,26 @@ class ArenasViewController: UIViewController {
         searchView.layer.borderWidth = 0.25
         searchView.layer.borderColor=UIColor.gray.cgColor
         configCollectionView()
+        collectionRef = Firestore.firestore().collection("Arenas")
+    }
+    
+    func getArenas() {
+        collectionRef.getDocuments{ (snapshot,err) in
+            if let err=err{
+                print(err)
+            }else{
+                for document in snapshot!.documents{
+                    let arenaData = document.data()
+                    let name = arenaData["Name"] as? String ?? "blank"
+                    let location = arenaData["location"] as? String ?? "blank"
+                    let price = arenaData["price"] as? String ?? "blank"
+                    let newArena = Arena(name:name,location: location,price: price)
+                    self.arenas.append(newArena)
+                }
+                self.arenasCollectionView.reloadData()
+                
+            }
+        }
     }
     
     func configCollectionView(){
@@ -42,11 +66,14 @@ class ArenasViewController: UIViewController {
 
 extension ArenasViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return arenas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellReuseId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellReuseId, for: indexPath) as! ArenasCollectionViewCell
+        cell.nameLabel.text = arenas[indexPath.row].name
+        cell.locationLabel.text = arenas[indexPath.row].location
+        cell.priceLabel.text = String(arenas[indexPath.row].price)
         return cell
     }
     

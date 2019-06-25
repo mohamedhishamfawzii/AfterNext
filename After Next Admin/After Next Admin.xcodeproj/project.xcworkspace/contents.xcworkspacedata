@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:After Next Admin.xcodeproj">
+      location = "group:/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

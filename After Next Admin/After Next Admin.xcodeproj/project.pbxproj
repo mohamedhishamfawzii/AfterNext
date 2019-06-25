@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC3C524BB363790044E0FA5 /* Pods_After_Next_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */; };
 		77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3724C22C0D94000B68531 /* AppDelegate.swift */; };
 		77A3725222C0D94000B68531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A3725022C0D94000B68531 /* Main.storyboard */; };
 		77A3725422C0D94100B68531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A3725322C0D94100B68531 /* Assets.xcassets */; };
@@ -15,11 +16,14 @@
 		77A3726322C0DDF700B68531 /* AddArenasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726122C0DDF700B68531 /* AddArenasViewController.xib */; };
 		77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726422C0FEA400B68531 /* AdminScanViewController.swift */; };
 		77A3726722C0FEA400B68531 /* AdminScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726522C0FEA400B68531 /* AdminScanViewController.xib */; };
-		77A3726922C0FFB900B68531 /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726822C0FFB900B68531 /* BookingsTableViewCell.xib */; };
-		77A3726B22C0FFE900B68531 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726A22C0FFE900B68531 /* BookingsTableViewCell.swift */; };
+		77A3726D22C10D4500B68531 /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */; };
+		77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */; };
+		77A3727122C1226800B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727022C1226800B68531 /* GoogleService-Info.plist */; };
+		77A3727A22C261A600B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727922C261A600B68531 /* Booking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AB8620BF552D975A8D48492 /* Pods-After Next Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin.debug.xcconfig"; sourceTree = "<group>"; };
 		77A3724922C0D94000B68531 /* After Next Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "After Next Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A3724C22C0D94000B68531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A3725122C0D94000B68531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,8 +34,12 @@
 		77A3726122C0DDF700B68531 /* AddArenasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddArenasViewController.xib; sourceTree = "<group>"; };
 		77A3726422C0FEA400B68531 /* AdminScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScanViewController.swift; sourceTree = "<group>"; };
 		77A3726522C0FEA400B68531 /* AdminScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminScanViewController.xib; sourceTree = "<group>"; };
-		77A3726822C0FFB900B68531 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingsTableViewCell.xib; path = "../../After Next Player/After Next Player/Scenes/Bookings Scene/BookingsTableViewCell.xib"; sourceTree = "<group>"; };
-		77A3726A22C0FFE900B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "../../After Next Player/After Next Player/Scenes/Bookings Scene/BookingsTableViewCell.swift"; sourceTree = "<group>"; };
+		77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
+		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
+		77A3727022C1226800B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77A3727922C261A600B68531 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_After_Next_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A335ACFB3A4D6A8898D33B22 /* Pods-After Next Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC3C524BB363790044E0FA5 /* Pods_After_Next_Admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D00391BD2A8F73C42860202 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AB8620BF552D975A8D48492 /* Pods-After Next Admin.debug.xcconfig */,
+				A335ACFB3A4D6A8898D33B22 /* Pods-After Next Admin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77A3724022C0D94000B68531 = {
 			isa = PBXGroup;
 			children = (
 				77A3724B22C0D94000B68531 /* After Next Admin */,
 				77A3724A22C0D94000B68531 /* Products */,
+				0D00391BD2A8F73C42860202 /* Pods */,
+				D348B663DC6E511AD7BB1AE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +84,7 @@
 		77A3724B22C0D94000B68531 /* After Next Admin */ = {
 			isa = PBXGroup;
 			children = (
+				77A3727022C1226800B68531 /* GoogleService-Info.plist */,
 				77A3724C22C0D94000B68531 /* AppDelegate.swift */,
 				77A3725022C0D94000B68531 /* Main.storyboard */,
 				77A3725322C0D94100B68531 /* Assets.xcassets */,
@@ -72,11 +93,20 @@
 				77A3726022C0DDF700B68531 /* AddArenasViewController.swift */,
 				77A3726122C0DDF700B68531 /* AddArenasViewController.xib */,
 				77A3726422C0FEA400B68531 /* AdminScanViewController.swift */,
+				77A3727922C261A600B68531 /* Booking.swift */,
 				77A3726522C0FEA400B68531 /* AdminScanViewController.xib */,
-				77A3726A22C0FFE900B68531 /* BookingsTableViewCell.swift */,
-				77A3726822C0FFB900B68531 /* BookingsTableViewCell.xib */,
+				77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */,
+				77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */,
 			);
 			path = "After Next Admin";
+			sourceTree = "<group>";
+		};
+		D348B663DC6E511AD7BB1AE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77A3725B22C0D94100B68531 /* Build configuration list for PBXNativeTarget "After Next Admin" */;
 			buildPhases = (
+				41EEB00039BB612D0A0F04DE /* [CP] Check Pods Manifest.lock */,
 				77A3724522C0D94000B68531 /* Sources */,
 				77A3724622C0D94000B68531 /* Frameworks */,
 				77A3724722C0D94000B68531 /* Resources */,
+				D6B1B8AF8D99EAB73555A43F /* [CP] Embed Pods Frameworks */,
+				F8F189E780B14AAEEB807D2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,13 +173,99 @@
 				77A3725722C0D94100B68531 /* LaunchScreen.storyboard in Resources */,
 				77A3725422C0D94100B68531 /* Assets.xcassets in Resources */,
 				77A3726322C0DDF700B68531 /* AddArenasViewController.xib in Resources */,
-				77A3726922C0FFB900B68531 /* BookingsTableViewCell.xib in Resources */,
+				77A3726D22C10D4500B68531 /* BookingsTableViewCell.xib in Resources */,
 				77A3726722C0FEA400B68531 /* AdminScanViewController.xib in Resources */,
 				77A3725222C0D94000B68531 /* Main.storyboard in Resources */,
+				77A3727122C1226800B68531 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41EEB00039BB612D0A0F04DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-After Next Admin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B1B8AF8D99EAB73555A43F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F189E780B14AAEEB807D2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77A3724522C0D94000B68531 /* Sources */ = {
@@ -154,9 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A3726222C0DDF700B68531 /* AddArenasViewController.swift in Sources */,
-				77A3726B22C0FFE900B68531 /* BookingsTableViewCell.swift in Sources */,
+				77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */,
 				77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */,
 				77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */,
+				77A3727A22C261A600B68531 /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +420,7 @@
 		};
 		77A3725C22C0D94100B68531 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB8620BF552D975A8D48492 /* Pods-After Next Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +439,7 @@
 		};
 		77A3725D22C0D94100B68531 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A335ACFB3A4D6A8898D33B22 /* Pods-After Next Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

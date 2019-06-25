@@ -6,7 +6,8 @@ target 'After Next Player' do
   use_frameworks!
 
 pod 'Cosmos'
-
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
   # Pods for After Next Player
 
 end

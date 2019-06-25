@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Admin Scan View Controller-->
+        <!--Admin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AdminScanViewController" customModule="After_Next_Admin" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NSB-C5-wco"/>
+                <viewController id="BYZ-38-t0r" customClass="AddArenasViewController" customModule="After_Next_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Admin" id="NSB-C5-wco"/>
                     <connections>
                         <segue destination="2wB-BE-B3P" kind="show" identifier="showScan" id="gei-oi-afa"/>
                     </connections>

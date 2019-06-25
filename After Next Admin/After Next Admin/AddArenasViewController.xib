@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddArenasViewController" customModule="After_Next_Admin" customModuleProvider="target">
             <connections>
                 <outlet property="fieldsView" destination="WJC-lO-S9s" id="Spn-4g-Nk8"/>
+                <outlet property="nameTextField" destination="Zpq-4E-OSr" id="zlm-B6-l1S"/>
+                <outlet property="priceTextfield" destination="qEW-my-Ema" id="lt9-sA-dSf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

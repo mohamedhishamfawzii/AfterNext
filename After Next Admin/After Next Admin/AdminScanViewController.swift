@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import Firebase
 class AdminScanViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var locationSearchBar: UISearchBar!
     @IBOutlet weak var searchView: UIView!
-    
+    var bookings:[Booking]=[]
+        var collectionRef:CollectionReference!
     var bookingNib = UINib(nibName: "BookingsTableViewCell", bundle: nil)
     var bookingReuse = "BookingsTableViewCell"
     override func viewDidLoad() {
@@ -23,6 +24,27 @@ config()
         self.tableView.separatorStyle = .none
         self.tableView.bounces=false
        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+      getBookings()
+    }
+    func getBookings() {
+        collectionRef.getDocuments{ (snapshot,err) in
+            if let err=err{
+                print(err)
+            }else{
+                for document in snapshot!.documents{
+                    let bookingData = document.data()
+                    let name = bookingData["arenaName"] as? String ?? "blank"
+                    print(name)
+                    let location = bookingData["arenaLocation"] as? String ?? "blank"
+                    let booking = Booking(arena: name,location: location)
+                   self.bookings.append(booking)
+                }
+                self.tableView.reloadData()
+                
+            }
+        }
     }
 
 
@@ -37,6 +59,7 @@ config()
         searchView.layer.shadowOffset = CGSize(width: 1, height: 3.5)
         searchView.layer.borderWidth = 0.25
         searchView.layer.borderColor=UIColor.gray.cgColor
+        collectionRef = Firestore.firestore().collection("Bookings")
         
     }
 
@@ -44,11 +67,13 @@ config()
 
 extension AdminScanViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return bookings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentCell = (tableView.dequeueReusableCell(withIdentifier: bookingReuse) as? BookingsTableViewCell)!
+        currentCell.arenaLabel.text = bookings[indexPath.row].arenaName
+        currentCell.locationLabel.text = bookings[indexPath.row].arenaLocation
         return currentCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

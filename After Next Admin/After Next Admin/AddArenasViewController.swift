@@ -24,7 +24,14 @@ class AddArenasViewController: UIViewController {
         fieldsView.layer.shadowOffset = CGSize(width: 1, height: 3.0)
         fieldsView.layer.borderWidth = 0.25
         fieldsView.layer.borderColor=UIColor.gray.cgColor
-        // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        priceTextfield.resignFirstResponder()
+
     }
 
     @IBAction func addClicked(_ sender: Any) {
@@ -43,9 +50,6 @@ class AddArenasViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
                 self.priceTextfield.text=""
                 self.nameTextField.text=""
-                
-                
-                
             }
         }
     }

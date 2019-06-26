@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>need to scan Qrcodes </string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>i need to save my  QR code</string>
 </dict>
 </plist>

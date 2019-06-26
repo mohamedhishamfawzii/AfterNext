@@ -20,6 +20,11 @@
 		77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */; };
 		77A3727122C1226800B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727022C1226800B68531 /* GoogleService-Info.plist */; };
 		77A3727A22C261A600B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727922C261A600B68531 /* Booking.swift */; };
+		E4C9411422C374CF00748158 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C9411222C374CF00748158 /* ScanVC.swift */; };
+		E4C9411522C374CF00748158 /* ScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C9411322C374CF00748158 /* ScanVC.xib */; };
+		E4C9411C22C38DF900748158 /* QrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C9411A22C38DF900748158 /* QrVC.swift */; };
+		E4C9411D22C38DF900748158 /* QrVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C9411B22C38DF900748158 /* QrVC.xib */; };
+		E4C9411F22C3A47C00748158 /* QrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C9411E22C3A47C00748158 /* QrModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +40,16 @@
 		77A3726422C0FEA400B68531 /* AdminScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScanViewController.swift; sourceTree = "<group>"; };
 		77A3726522C0FEA400B68531 /* AdminScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminScanViewController.xib; sourceTree = "<group>"; };
 		77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
-		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
+		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/hassanelshaer/Downloads/AfterNext-master/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
 		77A3727022C1226800B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77A3727922C261A600B68531 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_After_Next_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A335ACFB3A4D6A8898D33B22 /* Pods-After Next Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin.release.xcconfig"; sourceTree = "<group>"; };
+		E4C9411222C374CF00748158 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
+		E4C9411322C374CF00748158 /* ScanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanVC.xib; sourceTree = "<group>"; };
+		E4C9411A22C38DF900748158 /* QrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrVC.swift; sourceTree = "<group>"; };
+		E4C9411B22C38DF900748158 /* QrVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrVC.xib; sourceTree = "<group>"; };
+		E4C9411E22C3A47C00748158 /* QrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,11 @@
 				77A3726522C0FEA400B68531 /* AdminScanViewController.xib */,
 				77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */,
 				77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */,
+				E4C9411222C374CF00748158 /* ScanVC.swift */,
+				E4C9411322C374CF00748158 /* ScanVC.xib */,
+				E4C9411A22C38DF900748158 /* QrVC.swift */,
+				E4C9411B22C38DF900748158 /* QrVC.xib */,
+				E4C9411E22C3A47C00748158 /* QrModel.swift */,
 			);
 			path = "After Next Admin";
 			sourceTree = "<group>";
@@ -171,8 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A3725722C0D94100B68531 /* LaunchScreen.storyboard in Resources */,
+				E4C9411522C374CF00748158 /* ScanVC.xib in Resources */,
 				77A3725422C0D94100B68531 /* Assets.xcassets in Resources */,
 				77A3726322C0DDF700B68531 /* AddArenasViewController.xib in Resources */,
+				E4C9411D22C38DF900748158 /* QrVC.xib in Resources */,
 				77A3726D22C10D4500B68531 /* BookingsTableViewCell.xib in Resources */,
 				77A3726722C0FEA400B68531 /* AdminScanViewController.xib in Resources */,
 				77A3725222C0D94000B68531 /* Main.storyboard in Resources */,
@@ -274,9 +291,12 @@
 			files = (
 				77A3726222C0DDF700B68531 /* AddArenasViewController.swift in Sources */,
 				77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */,
+				E4C9411C22C38DF900748158 /* QrVC.swift in Sources */,
 				77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */,
+				E4C9411F22C3A47C00748158 /* QrModel.swift in Sources */,
 				77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */,
 				77A3727A22C261A600B68531 /* Booking.swift in Sources */,
+				E4C9411422C374CF00748158 /* ScanVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NJ984G2TD6;
+				DEVELOPMENT_TEAM = N7LF949382;
 				INFOPLIST_FILE = "After Next Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NJ984G2TD6;
+				DEVELOPMENT_TEAM = N7LF949382;
 				INFOPLIST_FILE = "After Next Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

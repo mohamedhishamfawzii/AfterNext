@@ -20,6 +20,7 @@
 		77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */; };
 		77A3727122C1226800B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727022C1226800B68531 /* GoogleService-Info.plist */; };
 		77A3727A22C261A600B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727922C261A600B68531 /* Booking.swift */; };
+		77A3727C22C370BA00B68531 /* Arena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727B22C370BA00B68531 /* Arena.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
 		77A3727022C1226800B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77A3727922C261A600B68531 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		77A3727B22C370BA00B68531 /* Arena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
 		895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_After_Next_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A335ACFB3A4D6A8898D33B22 /* Pods-After Next Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				77A3726522C0FEA400B68531 /* AdminScanViewController.xib */,
 				77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */,
 				77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */,
+				77A3727B22C370BA00B68531 /* Arena.swift */,
 			);
 			path = "After Next Admin";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */,
 				77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */,
 				77A3727A22C261A600B68531 /* Booking.swift in Sources */,
+				77A3727C22C370BA00B68531 /* Arena.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

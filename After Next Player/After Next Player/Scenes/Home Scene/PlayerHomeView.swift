@@ -9,24 +9,59 @@
 import UIKit
 import Firebase
 class PlayerHomeView: UIViewController {
-    
+     let times = ["6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","12 AM","1 AM"]
     @IBOutlet weak var locationSearchBar: UISearchBar!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var bookingsTableView: UITableView!
     @IBOutlet var seeAllButtons: [UIButton]!
     @IBOutlet weak var arenasCollectionView: UICollectionView!
+    var bookings:[Booking]=[]
+    var myBookings:[Booking]=[]
     var collectionRef:CollectionReference!
+    var collectionRefB:CollectionReference!
     let tableViewCellNib = UINib(nibName: "BookingsTableViewCell", bundle: nil)
     let tableViewCellReuseId = "BookingsTableViewCell"
     let collectionViewCellNib = UINib(nibName: "ArenasCollectionViewCell", bundle: nil)
     let collectionViewCellReuseId = "ArenasCollectionViewCell"
     var arenas:[Arena] = []
+    var hoursArray=[Bool](repeatElement(false,count: 8))
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
     override func viewWillAppear(_ animated: Bool) {
         getArenas()
+        getBookings()
+    }
+    func getBookings() {
+        let collectionRefb = Firestore.firestore().collection("Bookings")
+        collectionRefb.getDocuments{ (snapshot,err) in
+            if let err=err{
+                print(err)
+            }else{
+                for document in snapshot!.documents{
+                    let bookingData = document.data()
+                    let name = bookingData["arenaName"] as? String ?? "blank"
+                    print(name)
+                    let location = bookingData["arenaLocation"] as? String ?? "blank"
+                    let playerName = bookingData["playerName"] as? String ?? "blank"
+                    let playerNumber = bookingData["playerMobile"] as? String ?? "blank"
+                    let booking = Booking(arena: name,location: location,hour:bookingData["time"] as? String ?? "blank", arenaNumber: bookingData["arenaNumber"] as? String ?? "blank",playerName: playerName,playerNumber: playerNumber)
+                    booking.status=bookingData["status"] as? String ?? "waiting"
+                    let bookingCompare = self.bookings.filter({$0 as Booking == booking}).count > 0
+                    print(bookingCompare)
+                    if (bookingCompare){print("already added")}else{
+                        self.bookings.append(booking)
+                    }}
+                print(self.bookings.count)
+                self.myBookings=self.bookings.filter({$0.playerMobile == UserDefaults.standard.string(forKey: "mobile")!})
+                self.bookingsTableView.reloadData()
+                
+                }
+            
+                
+            
+        }
     }
     func getArenas() {
         collectionRef.getDocuments{ (snapshot,err) in
@@ -38,8 +73,18 @@ class PlayerHomeView: UIViewController {
                     let name = arenaData["Name"] as? String ?? "blank"
                     let location = arenaData["location"] as? String ?? "blank"
                     let price = arenaData["price"] as? String ?? "blank"
-                    let newArena = Arena(name:name,location: location,price: price)
-                    self.arenas.append(newArena)
+                    let hours = arenaData["TodayHours"] as? [Bool] ?? [Bool](repeatElement(false,count: 8))
+                    let number = arenaData["arenaPhone"] as? String ?? "blank"
+                    let id = document.documentID
+                    print("id",id)
+                    let newArena = Arena(name:name,location: location,price: price,hours: hours, number: number )
+                    print(newArena.name)
+                    
+                    let arenaCompare = self.arenas.filter({$0 as Arena == newArena}).count > 0
+                    print(arenaCompare)
+                    if (arenaCompare){print("already added")}else{
+                        self.arenas.append(newArena)
+                    }
                 }
                 self.arenasCollectionView.reloadData()
                 
@@ -61,6 +106,7 @@ class PlayerHomeView: UIViewController {
         ConfigBookingsTableView()
         configCollectionView()
         collectionRef = Firestore.firestore().collection("Arenas")
+        collectionRefB = Firestore.firestore().collection("Bookings")
     }
     
     
@@ -72,29 +118,36 @@ class PlayerHomeView: UIViewController {
         arenasCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: collectionViewCellReuseId)
     }
     
-    @IBAction func seeAllBookingsTapped(_ sender: Any) {
-        let allBookingsVC = AllBookingsViewController()
-        self.navigationController?.pushViewController(allBookingsVC, animated: true)
-    }
+
     
     @IBAction func seeAllArenasTapped(_ sender: Any) {
-        let allArenasVC = ArenasViewController()
+       let allArenasVC = ArenasViewController()
         self.navigationController?.pushViewController(allArenasVC, animated: true)
+        print("hma")
     }
 }
 
 extension PlayerHomeView:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return myBookings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseId, for: indexPath)
-        return cell
+        let currentCell = (tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseId) as? BookingsTableViewCell)!
+        currentCell.arenaName.text = myBookings[indexPath.row].arenaName
+        currentCell.arenaLocation.text = myBookings[indexPath.row].arenaLocation
+        currentCell.time.text = myBookings[indexPath.row].hour
+        currentCell.status.text=myBookings[indexPath.row].status
+        if (currentCell.status.text=="approved"){
+            currentCell.status.textColor=UIColor.green
+        }
+        if (currentCell.status.text=="declined"){
+            currentCell.status.textColor=UIColor.red
+        }
+        return currentCell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {        return 90
     }
 }
 
@@ -120,28 +173,56 @@ extension PlayerHomeView:UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
 }
 extension PlayerHomeView:ArenaBookedProtocol{
-    func arenaBooked(index: Int) {
-        var bookedArena = arenas[index]
-        var newbooking=Booking(arena: bookedArena.name , location: bookedArena.location)
-        
-        Firestore.firestore().collection("Bookings").addDocument(data: ["arenaName":newbooking.arenaName,"playerName":newbooking.playerName,"playerMobile":newbooking.playerMobile,"status":newbooking.status,"approved":newbooking.approved,"played":newbooking.played,"notes":newbooking.notes,"arenaLocation":newbooking.arenaLocation]) {
+    func arenaBooked(index: Int , time:Int) {
+        let bookedArena = arenas[index]
+       hoursArray=bookedArena.hours
+        print(bookedArena.hours)
+        let newbooking=Booking(arena: bookedArena.name , location: bookedArena.location, hour:times[time], arenaNumber: bookedArena.number)
+        if (bookedArena.hours[time]==false){
+             hoursArray[time]=true
+         Firestore.firestore().collection("Arenas")
+            .whereField("Name", isEqualTo: bookedArena.name)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    
+                } else if querySnapshot!.documents.count != 1 {
+                    // Perhaps this is an error for you?
+                } else {
+                    let document = querySnapshot!.documents.first
+                    document!.reference.updateData([
+                        "TodayHours": self.hoursArray
+                        ])
+                    bookedArena.hours=self.hoursArray
+                    
+                    Firestore.firestore().collection("Bookings").addDocument(data: ["arenaName":newbooking.arenaName,"playerName":newbooking.playerName,"playerMobile":newbooking.playerMobile,"status":newbooking.status,"approved":newbooking.approved,"played":newbooking.played,"notes":newbooking.notes,"arenaLocation":newbooking.arenaLocation,"time":newbooking.hour,"arenaPhone":newbooking.arenaNumber]) {
+                        
+                        (err)in
+                        if let err = err{
+                            print(err)
+                        }
+                        else{
+                            let alert = UIAlertController(title: "Your booking request has been recorded", message: "you can check the booking status from all bookings tab", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                                NSLog("The \"OK\" alert occured.")
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            
+                            self.getBookings()
+                            
+                            
+                        }
+                    }
+                }
+            }}else
+        {
+            let alert = UIAlertController(title: "This Hour is already booked", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
             
-            (err)in
-            if let err = err{
-                print(err)
-            }
-            else{
-                let alert = UIAlertController(title: "Your booking request has been recorded", message: "you can check the booking status from all bookings tab", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                    NSLog("The \"OK\" alert occured.")
-                }))
-                self.present(alert, animated: true, completion: nil)
-            
-                
-                
-                
-            }
         }
+   
     }
     
     

@@ -17,7 +17,6 @@
                 <outlet property="locationSearchBar" destination="RyG-DL-NFf" id="osS-Ar-8Be"/>
                 <outlet property="searchView" destination="Q0C-pk-r2a" id="3M6-re-mop"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="seeAllButtons" destination="wdo-Dg-ZKP" collectionClass="NSMutableArray" id="o5S-FY-wBL"/>
                 <outletCollection property="seeAllButtons" destination="1fG-cg-wKh" collectionClass="NSMutableArray" id="Yoi-vN-l7F"/>
             </connections>
         </placeholder>
@@ -63,8 +62,8 @@
                         <constraint firstAttribute="height" secondItem="RyG-DL-NFf" secondAttribute="height" id="qFm-vQ-Hso"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abz-xY-6ED">
-                    <rect key="frame" x="21" y="302" width="71" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abz-xY-6ED">
+                    <rect key="frame" x="21" y="302" width="125" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -100,22 +99,13 @@
                         <outlet property="delegate" destination="-1" id="DEw-LY-9Y2"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdo-Dg-ZKP">
-                    <rect key="frame" x="346" y="297.5" width="47" height="30"/>
-                    <state key="normal" title="See All">
-                        <color key="titleColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="seeAllBookingsTapped:" destination="-1" eventType="touchUpInside" id="Cdi-X1-4bS"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-cg-wKh">
                     <rect key="frame" x="346" y="579.5" width="47" height="30"/>
                     <state key="normal" title="See All">
-                        <color key="titleColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="seeAllArenasTapped:" destination="-1" eventType="touchUpInside" id="Ink-6g-Yhz"/>
+                        <action selector="seeAllArenasTapped:" destination="-1" eventType="touchUpInside" id="UuQ-fT-0b6"/>
                     </connections>
                 </button>
             </subviews>
@@ -131,19 +121,17 @@
                 <constraint firstItem="mdN-OU-cp6" firstAttribute="top" secondItem="jYe-AU-jCM" secondAttribute="bottom" constant="36" id="J4y-DC-TxX"/>
                 <constraint firstItem="63X-1C-PZj" firstAttribute="top" secondItem="abz-xY-6ED" secondAttribute="bottom" constant="21" id="Nos-It-SFY"/>
                 <constraint firstItem="tW6-L0-edf" firstAttribute="leading" secondItem="mdN-OU-cp6" secondAttribute="leading" id="Sql-FN-FVg"/>
-                <constraint firstItem="wdo-Dg-ZKP" firstAttribute="trailing" secondItem="Q0C-pk-r2a" secondAttribute="trailing" id="VYz-yw-9y6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q0C-pk-r2a" secondAttribute="trailing" constant="21" id="W47-yM-wNe"/>
                 <constraint firstItem="abz-xY-6ED" firstAttribute="leading" secondItem="mdN-OU-cp6" secondAttribute="leading" id="Yhw-4M-gyo"/>
                 <constraint firstItem="tW6-L0-edf" firstAttribute="top" secondItem="63X-1C-PZj" secondAttribute="bottom" constant="10" id="Z7r-PL-Eak"/>
                 <constraint firstItem="Q0C-pk-r2a" firstAttribute="trailing" secondItem="63X-1C-PZj" secondAttribute="trailing" id="ZNY-2P-ScM"/>
                 <constraint firstItem="jYe-AU-jCM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="aS0-Sa-1JP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1fG-cg-wKh" secondAttribute="trailing" constant="21" id="cbF-ld-4hp"/>
                 <constraint firstItem="abz-xY-6ED" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="302" id="gnv-0w-Yeo"/>
                 <constraint firstItem="mdN-OU-cp6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="h4Z-OT-4h5"/>
                 <constraint firstItem="J28-99-DR9" firstAttribute="top" secondItem="tW6-L0-edf" secondAttribute="bottom" constant="3" id="hsP-uN-cP3"/>
-                <constraint firstItem="wdo-Dg-ZKP" firstAttribute="centerY" secondItem="abz-xY-6ED" secondAttribute="centerY" id="klq-21-572"/>
                 <constraint firstItem="abz-xY-6ED" firstAttribute="leading" secondItem="63X-1C-PZj" secondAttribute="leading" id="njM-MY-vn3"/>
                 <constraint firstItem="J28-99-DR9" firstAttribute="trailing" secondItem="RyG-DL-NFf" secondAttribute="trailing" id="uC9-fy-h1v"/>
-                <constraint firstItem="1fG-cg-wKh" firstAttribute="leading" secondItem="wdo-Dg-ZKP" secondAttribute="leading" id="ud8-OJ-WcQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>

@@ -18,6 +18,8 @@
 		0CF2A7FA22BF7F7700B18570 /* PlayerHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */; };
 		0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */; };
 		0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */; };
+		7786560822C8F39C0078591A /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786560622C8F39C0078591A /* RegViewController.swift */; };
+		7786560922C8F39C0078591A /* RegViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7786560722C8F39C0078591A /* RegViewController.xib */; };
 		77A3727322C2284600B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727222C2284500B68531 /* GoogleService-Info.plist */; };
 		77A3727522C2319500B68531 /* Arena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727422C2319500B68531 /* Arena.swift */; };
 		77A3727722C2563100B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727622C2563100B68531 /* Booking.swift */; };
@@ -40,6 +42,8 @@
 		0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenasCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArenasCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B4CDA05E7F91571E926751A /* Pods-After Next Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Player/Pods-After Next Player.debug.xcconfig"; sourceTree = "<group>"; };
+		7786560622C8F39C0078591A /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		7786560722C8F39C0078591A /* RegViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegViewController.xib; sourceTree = "<group>"; };
 		77A3727222C2284500B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77A3727422C2319500B68531 /* Arena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
 		77A3727622C2563100B68531 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				0CF2A7F822BF7F7700B18570 /* PlayerHomeView.xib */,
 				0CF2A7FB22BF8DF200B18570 /* ArenasCollectionViewCell.swift */,
 				0CF2A7FC22BF8DF200B18570 /* ArenasCollectionViewCell.xib */,
+				7786560622C8F39C0078591A /* RegViewController.swift */,
+				7786560722C8F39C0078591A /* RegViewController.xib */,
 			);
 			path = "Home Scene";
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF2A7FE22BF8DF200B18570 /* ArenasCollectionViewCell.xib in Resources */,
+				7786560922C8F39C0078591A /* RegViewController.xib in Resources */,
 				0C8DB2FD22C0E88200255EB7 /* BookingsTableViewCell.xib in Resources */,
 				77A3727322C2284600B68531 /* GoogleService-Info.plist in Resources */,
 				0C8DB2FC22C0E88200255EB7 /* AllBookingsViewController.xib in Resources */,
@@ -311,6 +318,7 @@
 				0C8DB2F622C0DBC500255EB7 /* ArenasViewController.swift in Sources */,
 				0CF2A7F922BF7F7700B18570 /* PlayerHomeView.swift in Sources */,
 				0CF2A7FD22BF8DF200B18570 /* ArenasCollectionViewCell.swift in Sources */,
+				7786560822C8F39C0078591A /* RegViewController.swift in Sources */,
 				77C6803222BF7B6500A99AAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

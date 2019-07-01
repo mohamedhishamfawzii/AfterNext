@@ -10,11 +10,13 @@ import UIKit
 import Firebase
 class AddArenasViewController: UIViewController {
 
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var arenaPhone: UITextField!
     @IBOutlet weak var priceTextfield: UITextField!
     @IBOutlet weak var fieldsView: UIView!
-    var location = "new cairo"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fieldsView.layer.shadowRadius = 0.3
@@ -29,7 +31,9 @@ class AddArenasViewController: UIViewController {
 
     @IBAction func addClicked(_ sender: Any) {
         print("add clicked")
-        Firestore.firestore().collection("Arenas").addDocument(data: ["Name":nameTextField.text,"location":location,"price":priceTextfield.text,"Rating":2]) {
+        let location = locationTextField.text
+        let arena = Arena(name: nameTextField.text!,location: location!,price: priceTextfield.text!,number: arenaPhone.text!)
+        Firestore.firestore().collection("Arenas").addDocument(data: ["Name":arena.name,"location":location!,"price":arena.price,"Rating":2,"TodayHours":arena.hours,"arenaPhone":arena.number]) {
             
             (err)in
             if let err = err{
@@ -59,3 +63,8 @@ class AddArenasViewController: UIViewController {
     
 
 }
+
+    
+    
+    
+

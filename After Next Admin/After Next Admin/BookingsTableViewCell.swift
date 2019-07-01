@@ -7,15 +7,22 @@
 //
 
 import UIKit
+protocol bookingProtocol {
+    func acceptClicked(index:Int)
+     func declineClicked(index:Int)
+}
 
 class BookingsTableViewCell: UITableViewCell {
     @IBOutlet weak var timeSquare: UIView!
 
- 
+    @IBOutlet weak var time: UILabel!
+    
     @IBOutlet weak var arenaLabel: UILabel!
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
+    var delegate:bookingProtocol?
+    var index:Int!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,6 +39,13 @@ class BookingsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction func declineClicked(_ sender: Any) {
+        delegate?.declineClicked(index: index)
+    }
+    @IBAction func approveClicked(_ sender: Any) {
+        delegate?.acceptClicked(index: index)
     }
     
 }

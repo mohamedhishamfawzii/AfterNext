@@ -16,7 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+          FirebaseApp.configure()
+        let defaults = UserDefaults.standard
+        if (defaults.bool(forKey:"set")){
+            let sb = UIStoryboard(name:"Main", bundle: Bundle.main)
+            let vc = sb.instantiateViewController(withIdentifier: "nav")
+            let vcc = PlayerHomeView()
+            vc.addChild(vcc)
+            vc.modalTransitionStyle = .crossDissolve
+            window!.rootViewController = vc
+            window!.makeKeyAndVisible()}
+      
         return true
     }
 

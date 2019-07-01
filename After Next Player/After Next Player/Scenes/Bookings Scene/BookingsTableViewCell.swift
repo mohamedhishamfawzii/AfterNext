@@ -11,6 +11,11 @@ import UIKit
 class BookingsTableViewCell: UITableViewCell {
     @IBOutlet weak var timeSquare: UIView!
     
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var arenaStatus: UILabel!
+    @IBOutlet weak var arenaLocation: UILabel!
+    @IBOutlet weak var arenaName: UILabel!
     @IBOutlet weak var cellView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +28,8 @@ class BookingsTableViewCell: UITableViewCell {
         cellView.layer.shadowOffset = CGSize(width: 0, height: 2)
         cellView.layer.borderColor=UIColor.gray.cgColor
         cellView.layer.borderWidth=0.05
+        
+     
         
     }
 

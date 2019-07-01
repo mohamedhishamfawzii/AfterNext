@@ -17,7 +17,11 @@ class Booking{
     var status:String
     var played:Bool
     var notes:String
-    init(arena:String,location:String) {
+    var hour:String
+    var id=""
+    var arenaNumber:String
+    init(arena:String,location:String,hour:String,arenaNumber:String) {
+        self.hour=hour
         self.arenaLocation=location
         self.arenaName=arena
         self.approved=false
@@ -26,6 +30,7 @@ class Booking{
         self.played=false
         self.notes=""
         self.status="Waiting Approval"
+        self.arenaNumber=arenaNumber
     }
     
 }

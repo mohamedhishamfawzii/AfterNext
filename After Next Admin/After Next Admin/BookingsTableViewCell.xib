@@ -26,8 +26,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="120.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-8x-iP7">
-                                        <rect key="frame" x="27.5" y="49" width="15.5" height="23"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
+                                        <rect key="frame" x="29.5" y="52.5" width="11" height="16"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                         <color key="textColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -64,6 +64,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-cv-3gu">
                                 <rect key="frame" x="357" y="3" width="58" height="30"/>
                                 <state key="normal" title="Approve"/>
+                                <connections>
+                                    <action selector="approveClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w7z-Ek-f26"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-3L-JA3">
                                 <rect key="frame" x="357" y="87.5" width="52" height="30"/>
@@ -71,6 +74,9 @@
                                 <state key="normal" title="Decline">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="declineClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5tE-9c-NUI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,6 +107,7 @@
                 <outlet property="arenaLabel" destination="KxD-vW-vvT" id="QLL-Vt-TOP"/>
                 <outlet property="cellView" destination="W07-B9-bGd" id="vk5-Hv-uIH"/>
                 <outlet property="locationLabel" destination="s0A-kX-cy7" id="jDH-PU-sPH"/>
+                <outlet property="time" destination="xFa-8x-iP7" id="Ooj-YS-mq8"/>
                 <outlet property="timeSquare" destination="yiF-RY-Lby" id="e4J-KI-8xR"/>
             </connections>
             <point key="canvasLocation" x="228.2608695652174" y="155.02232142857142"/>

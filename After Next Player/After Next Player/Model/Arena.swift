@@ -13,12 +13,21 @@ class Arena {
     var rating : Int
     var price: String
     var hours : [Bool]
-    init(name:String,location:String,price:String) {
-        self.hours = [Bool](repeatElement(false,count: 8))
+    var number : String
+    init(name:String,location:String,price:String,hours:[Bool],number:String) {
+        self.hours = hours
         self.name = name
         self.location = location
         self.price = price
         self.rating = 0
+        self.number=number
         
     }
+}
+extension Arena :Equatable{
+    static func == (lhs: Arena, rhs: Arena) -> Bool {
+        return (lhs.name == rhs.name && lhs.price==rhs.price)
+    }
+    
+    
 }

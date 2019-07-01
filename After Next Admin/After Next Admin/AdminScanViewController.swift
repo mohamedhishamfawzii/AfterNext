@@ -38,7 +38,8 @@ config()
                     let name = bookingData["arenaName"] as? String ?? "blank"
                     print(name)
                     let location = bookingData["arenaLocation"] as? String ?? "blank"
-                    let booking = Booking(arena: name,location: location)
+                    let booking = Booking(arena: name,location: location,hour:bookingData["time"] as? String ?? "blank", arenaNumber: bookingData["arenaNumber"] as? String ?? "blank")
+                    booking.id = document.documentID
                    self.bookings.append(booking)
                 }
                 self.tableView.reloadData()
@@ -74,9 +75,58 @@ extension AdminScanViewController:UITableViewDataSource,UITableViewDelegate{
         let currentCell = (tableView.dequeueReusableCell(withIdentifier: bookingReuse) as? BookingsTableViewCell)!
         currentCell.arenaLabel.text = bookings[indexPath.row].arenaName
         currentCell.locationLabel.text = bookings[indexPath.row].arenaLocation
+          currentCell.time.text = bookings[indexPath.row].hour
+        currentCell.index=indexPath.row
+        currentCell.delegate=self
         return currentCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+}
+}
+
+extension AdminScanViewController:bookingProtocol{
+    func acceptClicked(index: Int) {
+        print("accepted")
+        print(bookings[index].id)
+        collectionRef.getDocuments{ (querySnapshot,err) in
+            if let err=err{
+                print(err)
+            }else{
+                for document in querySnapshot!.documents{
+                    if (document.documentID == self.bookings[index].id){
+                        let document = querySnapshot!.documents.first
+                        document!.reference.updateData([
+                            "status": "approved"
+                            ])
+                    }
+            
+                }
+          
+            }
+        }
+      
+    }
+    
+   
+    func declineClicked(index: Int) {
+        print("declined")
+               print(bookings[index].id)
+        collectionRef.getDocuments{ (querySnapshot,err) in
+            if let err=err{
+                print(err)
+            }else{
+                for document in querySnapshot!.documents{
+                    if (document.documentID == self.bookings[index].id){
+                        let document = querySnapshot!.documents.first
+                        document!.reference.updateData([
+                            "status": "declined"
+                            ])
+                    }
+                    
+                }
+                
+            }
+        }
 }
 }

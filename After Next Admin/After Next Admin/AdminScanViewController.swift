@@ -9,46 +9,58 @@
 import UIKit
 import Firebase
 class AdminScanViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var locationSearchBar: UISearchBar!
     @IBOutlet weak var searchView: UIView!
-    var bookings:[Booking]=[]
-        var collectionRef:CollectionReference!
+    var bookings:[Booking] = []
+    
+    var collectionRef:CollectionReference!
     var bookingNib = UINib(nibName: "BookingsTableViewCell", bundle: nil)
     var bookingReuse = "BookingsTableViewCell"
     override func viewDidLoad() {
         super.viewDidLoad()
-config()
+        config()
         tableView.register(bookingNib, forCellReuseIdentifier:bookingReuse)
         self.tableView.separatorStyle = .none
         self.tableView.bounces=false
-       
+        Firestore.firestore().collection("Bookings")
+            .addSnapshotListener { querySnapshot, error in
+                self.bookings.removeAll()
+                if let error = error {
+                    print("Error retreiving collection: \(error)")
+                }
+                self.getBookings()
+                self.tableView.reloadData()
+        }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-      getBookings()
+        getBookings()
     }
+    
     func getBookings() {
         collectionRef.getDocuments{ (snapshot,err) in
             if let err=err{
                 print(err)
             }else{
                 for document in snapshot!.documents{
+//                    self.bookings.removeAll()
                     let bookingData = document.data()
                     let name = bookingData["arenaName"] as? String ?? "blank"
                     print(name)
                     let location = bookingData["arenaLocation"] as? String ?? "blank"
                     let booking = Booking(arena: name,location: location,hour:bookingData["time"] as? String ?? "blank", arenaNumber: bookingData["arenaNumber"] as? String ?? "blank")
                     booking.id = document.documentID
-                   self.bookings.append(booking)
+                    self.bookings.append(booking)
                 }
                 self.tableView.reloadData()
                 
             }
         }
     }
-
-
+    
+    
     func config(){
         let v = locationSearchBar.subviews.first!.subviews[0]
         v.removeFromSuperview()
@@ -63,7 +75,7 @@ config()
         collectionRef = Firestore.firestore().collection("Bookings")
         
     }
-
+    
 }
 
 extension AdminScanViewController:UITableViewDataSource,UITableViewDelegate{
@@ -75,14 +87,14 @@ extension AdminScanViewController:UITableViewDataSource,UITableViewDelegate{
         let currentCell = (tableView.dequeueReusableCell(withIdentifier: bookingReuse) as? BookingsTableViewCell)!
         currentCell.arenaLabel.text = bookings[indexPath.row].arenaName
         currentCell.locationLabel.text = bookings[indexPath.row].arenaLocation
-          currentCell.time.text = bookings[indexPath.row].hour
+        currentCell.time.text = bookings[indexPath.row].hour
         currentCell.index=indexPath.row
         currentCell.delegate=self
         return currentCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
-}
+    }
 }
 
 extension AdminScanViewController:bookingProtocol{
@@ -100,18 +112,18 @@ extension AdminScanViewController:bookingProtocol{
                             "status": "approved"
                             ])
                     }
-            
+                    
                 }
-          
+                
             }
         }
-      
+        
     }
     
-   
+    
     func declineClicked(index: Int) {
         print("declined")
-               print(bookings[index].id)
+        print(bookings[index].id)
         collectionRef.getDocuments{ (querySnapshot,err) in
             if let err=err{
                 print(err)
@@ -128,5 +140,5 @@ extension AdminScanViewController:bookingProtocol{
                 
             }
         }
-}
+    }
 }

@@ -36,7 +36,7 @@
 		77A3726422C0FEA400B68531 /* AdminScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScanViewController.swift; sourceTree = "<group>"; };
 		77A3726522C0FEA400B68531 /* AdminScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminScanViewController.xib; sourceTree = "<group>"; };
 		77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
-		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
+		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/hassanelshaer/Desktop/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
 		77A3727022C1226800B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77A3727922C261A600B68531 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		77A3727B22C370BA00B68531 /* Arena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -243,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8F189E780B14AAEEB807D2A /* [CP] Copy Pods Resources */ = {
@@ -254,7 +254,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -265,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-After Next Admin/Pods-After Next Admin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

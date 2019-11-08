@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BC3C524BB363790044E0FA5 /* Pods_After_Next_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895AB7AFD5527EF0F4182CE0 /* Pods_After_Next_Admin.framework */; };
+		7713B78022CE561E002E2144 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713B77F22CE561E002E2144 /* BookingsTableViewCell.swift */; };
 		77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3724C22C0D94000B68531 /* AppDelegate.swift */; };
 		77A3725222C0D94000B68531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A3725022C0D94000B68531 /* Main.storyboard */; };
 		77A3725422C0D94100B68531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A3725322C0D94100B68531 /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726422C0FEA400B68531 /* AdminScanViewController.swift */; };
 		77A3726722C0FEA400B68531 /* AdminScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726522C0FEA400B68531 /* AdminScanViewController.xib */; };
 		77A3726D22C10D4500B68531 /* BookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */; };
-		77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */; };
 		77A3727122C1226800B68531 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A3727022C1226800B68531 /* GoogleService-Info.plist */; };
 		77A3727A22C261A600B68531 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727922C261A600B68531 /* Booking.swift */; };
 		77A3727C22C370BA00B68531 /* Arena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727B22C370BA00B68531 /* Arena.swift */; };
@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2AB8620BF552D975A8D48492 /* Pods-After Next Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After Next Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-After Next Admin/Pods-After Next Admin.debug.xcconfig"; sourceTree = "<group>"; };
+		7713B77F22CE561E002E2144 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/mohamedhisham/Downloads/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
 		77A3724922C0D94000B68531 /* After Next Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "After Next Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A3724C22C0D94000B68531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A3725122C0D94000B68531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		77A3726422C0FEA400B68531 /* AdminScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScanViewController.swift; sourceTree = "<group>"; };
 		77A3726522C0FEA400B68531 /* AdminScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminScanViewController.xib; sourceTree = "<group>"; };
 		77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingsTableViewCell.xib; sourceTree = "<group>"; };
-		77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingsTableViewCell.swift; path = "/Users/hassanelshaer/Desktop/Robusta/AfterNext/After Next Admin/After Next Admin/BookingsTableViewCell.swift"; sourceTree = "<absolute>"; };
 		77A3727022C1226800B68531 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77A3727922C261A600B68531 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		77A3727B22C370BA00B68531 /* Arena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 				77A3725822C0D94100B68531 /* Info.plist */,
 				77A3726022C0DDF700B68531 /* AddArenasViewController.swift */,
 				77A3726122C0DDF700B68531 /* AddArenasViewController.xib */,
+				7713B77F22CE561E002E2144 /* BookingsTableViewCell.swift */,
 				77A3726422C0FEA400B68531 /* AdminScanViewController.swift */,
 				77A3727922C261A600B68531 /* Booking.swift */,
 				77A3726522C0FEA400B68531 /* AdminScanViewController.xib */,
-				77A3726E22C10D8300B68531 /* BookingsTableViewCell.swift */,
 				77A3726C22C10D4500B68531 /* BookingsTableViewCell.xib */,
 				77A3727B22C370BA00B68531 /* Arena.swift */,
 			);
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A3726222C0DDF700B68531 /* AddArenasViewController.swift in Sources */,
-				77A3726F22C10D8300B68531 /* BookingsTableViewCell.swift in Sources */,
+				7713B78022CE561E002E2144 /* BookingsTableViewCell.swift in Sources */,
 				77A3726622C0FEA400B68531 /* AdminScanViewController.swift in Sources */,
 				77A3724D22C0D94000B68531 /* AppDelegate.swift in Sources */,
 				77A3727A22C261A600B68531 /* Booking.swift in Sources */,

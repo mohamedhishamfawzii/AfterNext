@@ -107,8 +107,7 @@ extension AdminScanViewController:bookingProtocol{
             }else{
                 for document in querySnapshot!.documents{
                     if (document.documentID == self.bookings[index].id){
-                        let document = querySnapshot!.documents.first
-                        document!.reference.updateData([
+                        document.reference.updateData([
                             "status": "approved"
                             ])
                     }
@@ -130,8 +129,7 @@ extension AdminScanViewController:bookingProtocol{
             }else{
                 for document in querySnapshot!.documents{
                     if (document.documentID == self.bookings[index].id){
-                        let document = querySnapshot!.documents.first
-                        document!.reference.updateData([
+                        document.reference.updateData([
                             "status": "declined"
                             ])
                     }

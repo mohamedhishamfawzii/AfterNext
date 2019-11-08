@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group3" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-zI-7po">
-                    <rect key="frame" x="157" y="144" width="100" height="100"/>
+                    <rect key="frame" x="157" y="144" width="100" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="E4P-Y2-rVl"/>
-                        <constraint firstAttribute="height" constant="100" id="nux-sk-n35"/>
+                        <constraint firstAttribute="height" constant="50" id="nux-sk-n35"/>
                     </constraints>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Your fullname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-F8-5u2">
@@ -49,7 +49,7 @@
                     <rect key="frame" x="70" y="633" width="274" height="55"/>
                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                     <state key="normal" title="Start">
-                        <color key="titleColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="startPressed:" destination="-1" eventType="touchUpInside" id="l3J-Ty-P3X"/>

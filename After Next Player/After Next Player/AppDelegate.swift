@@ -8,15 +8,20 @@
 
 import UIKit
 import Firebase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupAppInterfaceStyle()
         // Override point for customization after application launch.
           FirebaseApp.configure()
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+        let db = Firestore.firestore()
+        db.settings = settings
         let defaults = UserDefaults.standard
         if (defaults.bool(forKey:"set")){
             let sb = UIStoryboard(name:"Main", bundle: Bundle.main)
@@ -25,11 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             vc.addChild(vcc)
             vc.modalTransitionStyle = .crossDissolve
             window!.rootViewController = vc
-            window!.makeKeyAndVisible()}
-      
+            window!.makeKeyAndVisible()
+        }
         return true
     }
 
+    fileprivate func setupAppInterfaceStyle() {
+          if #available(iOS 13.0, *) {
+              window?.overrideUserInterfaceStyle = .light
+          }
+      }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

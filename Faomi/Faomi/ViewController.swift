@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         yellowView.layer.cornerRadius=35
         cellImage.layer.cornerRadius=15
         blackView.layer.cornerRadius=35
-        self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.02352941176, green: 0.01960784314, blue: 0.09019607843, alpha: 1))
+     //   self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.02352941176, green: 0.01960784314, blue: 0.09019607843, alpha: 1))
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpFirst))
         swipeUp.direction = .up
         self.view.addGestureRecognizer(swipeUp)
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                 
                 
         }, completion: {finished in
-            self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.1882352941, green: 0.1882352941, blue: 0.6431372549, alpha: 1))
+           // self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.1882352941, green: 0.1882352941, blue: 0.6431372549, alpha: 1))
             self.yellowView.layer.cornerRadius=0
             self.hishamToTop.constant -= 150
             UIView.animate(
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
         blackToTop.constant=300
         cellToLeft.constant = 30
             
-          self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.02352941176, green: 0.01960784314, blue: 0.09019607843, alpha: 1))
+        //  self.setStatusBarBackgroundColor(color: #colorLiteral(red: 0.02352941176, green: 0.01960784314, blue: 0.09019607843, alpha: 1))
            self.yellowView.layer.cornerRadius=35
         UIView.animate(
             
@@ -108,12 +108,12 @@ class ViewController: UIViewController {
             )}
         
     }
-    func setStatusBarBackgroundColor(color: UIColor) {
-        
-        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-        
-        statusBar.backgroundColor = color
-    }
+//    func setStatusBarBackgroundColor(color: UIColor) {
+//
+//        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+//
+//        statusBar.backgroundColor = color
+//    }
     
 
 

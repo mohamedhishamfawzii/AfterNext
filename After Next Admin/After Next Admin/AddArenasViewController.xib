@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +48,6 @@
                                 <constraint firstAttribute="width" constant="242" id="SOz-Mq-om9"/>
                                 <constraint firstAttribute="height" constant="30" id="Z47-Bg-Nqz"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -81,7 +77,6 @@
                                 <constraint firstAttribute="height" constant="30" id="plH-Vl-sc5"/>
                                 <constraint firstAttribute="width" constant="70" id="uZL-0B-5ud"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
@@ -107,7 +102,6 @@
                                 <constraint firstAttribute="width" constant="242" id="GvS-cg-oxB"/>
                                 <constraint firstAttribute="height" constant="30" id="jzR-at-74f"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -163,17 +157,32 @@
                         <action selector="finishPressed:" destination="-1" eventType="touchUpInside" id="h7H-Ki-toc"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbk-4y-I3Q">
+                    <rect key="frame" x="50" y="836" width="70" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="3N7-Bk-SK7"/>
+                    </constraints>
+                    <state key="normal" title="Reset">
+                        <color key="titleColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="resetDatabase:" destination="-1" eventType="touchUpInside" id="XE0-Ao-GoU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tYR-YY-AhD" secondAttribute="trailing" constant="10" id="0EC-6e-q7M"/>
                 <constraint firstAttribute="bottom" secondItem="tYR-YY-AhD" secondAttribute="bottom" constant="10" id="1tF-dC-H12"/>
+                <constraint firstItem="hbk-4y-I3Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="PWE-eJ-6N4"/>
                 <constraint firstItem="WJC-lO-S9s" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QdI-Vh-JJU"/>
                 <constraint firstItem="WJC-lO-S9s" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XhU-NN-b2b"/>
                 <constraint firstAttribute="trailing" secondItem="S25-jr-qGi" secondAttribute="trailing" constant="10" id="a0c-Ec-8lN"/>
                 <constraint firstItem="qQv-iD-9m2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="f64-vT-DMQ"/>
                 <constraint firstAttribute="bottom" secondItem="S25-jr-qGi" secondAttribute="bottom" constant="10" id="pwI-R5-oM0"/>
                 <constraint firstItem="qQv-iD-9m2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="pys-gf-VmE"/>
+                <constraint firstItem="hbk-4y-I3Q" firstAttribute="centerY" secondItem="tYR-YY-AhD" secondAttribute="centerY" id="vcB-e1-UFX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
@@ -181,7 +190,6 @@
         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="X6M-9I-emj">
             <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <nil key="textColor"/>
             <fontDescription key="fontDescription" type="system" pointSize="14"/>
             <textInputTraits key="textInputTraits"/>
             <point key="canvasLocation" x="-253" y="-47"/>

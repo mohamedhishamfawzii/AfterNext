@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdminScanViewController" customModule="After_Next_Admin" customModuleProvider="target">
             <connections>
-                <outlet property="locationSearchBar" destination="zqq-rX-ho0" id="ARr-TM-v0b"/>
-                <outlet property="searchView" destination="yPu-A0-O3Q" id="xAu-O8-cxR"/>
                 <outlet property="tableView" destination="F4T-sS-YeI" id="Yjm-lJ-TmW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,34 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPu-A0-O3Q" userLabel="searchView">
-                    <rect key="frame" x="20" y="131" width="374" height="62"/>
-                    <subviews>
-                        <searchBar contentMode="redraw" placeholder="  eg: 01002342702" translatesAutoresizingMaskIntoConstraints="NO" id="zqq-rX-ho0">
-                            <rect key="frame" x="8" y="10" width="366" height="42"/>
-                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                    <integer key="value" value="0"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </searchBar>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="zqq-rX-ho0" secondAttribute="bottom" constant="10" id="1EL-me-YLm"/>
-                        <constraint firstItem="zqq-rX-ho0" firstAttribute="leading" secondItem="yPu-A0-O3Q" secondAttribute="leadingMargin" id="H2U-GF-ezU"/>
-                        <constraint firstAttribute="trailing" secondItem="zqq-rX-ho0" secondAttribute="trailing" id="OdP-9X-o50"/>
-                        <constraint firstItem="zqq-rX-ho0" firstAttribute="centerY" secondItem="GKU-4Y-Xe3" secondAttribute="centerY" id="aul-Rs-FZu"/>
-                        <constraint firstItem="zqq-rX-ho0" firstAttribute="top" secondItem="yPu-A0-O3Q" secondAttribute="top" constant="10" id="dcz-tX-kun"/>
-                        <constraint firstAttribute="height" constant="62" id="uIu-9v-GzW"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="GKU-4Y-Xe3"/>
-                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F4T-sS-YeI">
-                    <rect key="frame" x="0.0" y="253" width="414" height="609"/>
+                    <rect key="frame" x="0.0" y="151" width="414" height="711"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="TO2-EM-leU"/>
@@ -64,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxO-1X-OMu">
-                    <rect key="frame" x="28" y="213" width="221" height="20"/>
+                    <rect key="frame" x="28" y="111" width="221" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Xos-UU-DaK"/>
                     </constraints>
@@ -77,20 +46,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yPu-A0-O3Q" firstAttribute="top" secondItem="XN7-Ox-RZL" secondAttribute="bottom" constant="30" id="4YO-fA-nTi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="F4T-sS-YeI" secondAttribute="bottom" id="79R-a7-93J"/>
-                <constraint firstItem="yPu-A0-O3Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AmF-Jg-fE3"/>
                 <constraint firstItem="vxO-1X-OMu" firstAttribute="leading" secondItem="XN7-Ox-RZL" secondAttribute="leading" id="Dit-5U-zsA"/>
                 <constraint firstItem="F4T-sS-YeI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G3J-9Z-NkM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F4T-sS-YeI" secondAttribute="trailing" id="IxL-UW-rb1"/>
-                <constraint firstItem="vxO-1X-OMu" firstAttribute="top" secondItem="zqq-rX-ho0" secondAttribute="bottom" constant="30" id="PN1-tE-QfO"/>
-                <constraint firstItem="XN7-Ox-RZL" firstAttribute="leading" secondItem="zqq-rX-ho0" secondAttribute="leading" id="YuT-hb-Cht"/>
-                <constraint firstItem="yPu-A0-O3Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cuD-Vs-3Is"/>
+                <constraint firstItem="XN7-Ox-RZL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="Zcb-tP-yka"/>
                 <constraint firstItem="F4T-sS-YeI" firstAttribute="top" secondItem="vxO-1X-OMu" secondAttribute="bottom" constant="20" id="ejY-pd-Agv"/>
                 <constraint firstItem="XN7-Ox-RZL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="iNt-nI-ywx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yPu-A0-O3Q" secondAttribute="trailing" constant="20" id="tSP-tb-vdF"/>
+                <constraint firstItem="vxO-1X-OMu" firstAttribute="top" secondItem="XN7-Ox-RZL" secondAttribute="bottom" constant="10" id="mxf-zu-QQY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="102"/>
         </view>
     </objects>
 </document>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftGifOrigin
 class ProgressHUD: UIVisualEffectView {
 
     var text: String? {
@@ -16,12 +16,14 @@ class ProgressHUD: UIVisualEffectView {
         }
     }
 
-    let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    let activityIndictor: UIImageView = UIImageView()
     let label: UILabel = UILabel()
     let blurEffect = UIBlurEffect(style: .prominent)
     let vibrancyView: UIVisualEffectView
 
     init(text: String) {
+            activityIndictor.loadGif(name: "ball")
+                   activityIndictor.startAnimating()
         self.text = text
         self.vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
         super.init(effect: blurEffect)
@@ -46,18 +48,18 @@ class ProgressHUD: UIVisualEffectView {
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-
+        self.contentView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         if let superview = self.superview {
-
-            let width = superview.frame.size.width / 2
-            let height: CGFloat = 50.0
+            
+            let width = superview.frame.size.width / 1.5
+            let height: CGFloat = 70
             self.frame = CGRect(x: superview.frame.size.width / 2 - width / 2,
                                 y: superview.frame.height / 2 - height / 2,
                                 width: width,
                                 height: height)
             vibrancyView.frame = self.bounds
 
-            let activityIndicatorSize: CGFloat = 40
+            let activityIndicatorSize: CGFloat = 80
             activityIndictor.frame = CGRect(x: 5,
                                             y: height / 2 - activityIndicatorSize / 2,
                                             width: activityIndicatorSize,
@@ -71,8 +73,8 @@ class ProgressHUD: UIVisualEffectView {
                                  y: 0,
                                  width: width - activityIndicatorSize - 15,
                                  height: height)
-            label.textColor = UIColor.gray
-            label.font = UIFont.boldSystemFont(ofSize: 16)
+            label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            label.font = UIFont(name: "Futura", size: 18)
         }
     }
 

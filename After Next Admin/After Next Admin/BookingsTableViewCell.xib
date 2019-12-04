@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +13,14 @@
             <rect key="frame" x="0.0" y="0.0" width="445" height="141"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="445" height="140.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="445" height="141"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W07-B9-bGd">
-                        <rect key="frame" x="10" y="10" width="425" height="120.5"/>
+                        <rect key="frame" x="10" y="10" width="425" height="121"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-mY-1La">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="120.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-8x-iP7">
                                         <rect key="frame" x="29.5" y="52.5" width="11" height="16"/>
@@ -32,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiF-RY-Lby">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="121"/>
                                         <color key="backgroundColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -69,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-3L-JA3">
-                                <rect key="frame" x="357" y="87.5" width="52" height="30"/>
+                                <rect key="frame" x="357" y="88" width="52" height="30"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                 <state key="normal" title="Decline">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,6 +75,12 @@
                                     <action selector="declineClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5tE-9c-NUI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2406 E 8th St, Alexandria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeG-x4-H9l">
+                                <rect key="frame" x="90" y="15" width="153.5" height="12"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -86,12 +89,14 @@
                             <constraint firstItem="KxD-vW-vvT" firstAttribute="centerY" secondItem="W07-B9-bGd" secondAttribute="centerY" constant="-10" id="DDD-UU-sfh"/>
                             <constraint firstItem="BTJ-mY-1La" firstAttribute="leading" secondItem="W07-B9-bGd" secondAttribute="leading" id="JgI-Qa-RBd"/>
                             <constraint firstItem="Dji-cv-3gu" firstAttribute="top" secondItem="W07-B9-bGd" secondAttribute="top" constant="3" id="Lbm-Fj-QZ3"/>
+                            <constraint firstItem="HeG-x4-H9l" firstAttribute="leading" secondItem="KxD-vW-vvT" secondAttribute="leading" id="dDH-63-Prf"/>
                             <constraint firstItem="E5B-3L-JA3" firstAttribute="leading" secondItem="Dji-cv-3gu" secondAttribute="leading" id="fTP-ca-KVG"/>
                             <constraint firstItem="s0A-kX-cy7" firstAttribute="top" secondItem="KxD-vW-vvT" secondAttribute="bottom" constant="5" id="fxC-u6-7D0"/>
                             <constraint firstAttribute="trailing" secondItem="Dji-cv-3gu" secondAttribute="trailing" constant="10" id="g3l-37-Y8W"/>
                             <constraint firstItem="s0A-kX-cy7" firstAttribute="leading" secondItem="KxD-vW-vvT" secondAttribute="leading" id="ipL-Q3-G8m"/>
                             <constraint firstAttribute="bottom" secondItem="E5B-3L-JA3" secondAttribute="bottom" constant="3" id="n5L-el-4zF"/>
                             <constraint firstItem="KxD-vW-vvT" firstAttribute="leading" secondItem="BTJ-mY-1La" secondAttribute="trailing" constant="20" id="ug1-sL-8YH"/>
+                            <constraint firstItem="HeG-x4-H9l" firstAttribute="top" secondItem="W07-B9-bGd" secondAttribute="top" constant="15" id="y2C-pL-ib1"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -107,6 +112,7 @@
                 <outlet property="arenaLabel" destination="KxD-vW-vvT" id="QLL-Vt-TOP"/>
                 <outlet property="cellView" destination="W07-B9-bGd" id="vk5-Hv-uIH"/>
                 <outlet property="locationLabel" destination="s0A-kX-cy7" id="jDH-PU-sPH"/>
+                <outlet property="stamp" destination="HeG-x4-H9l" id="a8w-ZA-7oo"/>
                 <outlet property="time" destination="xFa-8x-iP7" id="Ooj-YS-mq8"/>
                 <outlet property="timeSquare" destination="yiF-RY-Lby" id="e4J-KI-8xR"/>
             </connections>

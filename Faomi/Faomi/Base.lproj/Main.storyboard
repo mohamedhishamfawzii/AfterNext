@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +17,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vT-a6-LrI">
                                 <rect key="frame" x="0.0" y="288" width="414" height="574"/>
-                                <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJZ-x1-aWW">
                                 <rect key="frame" x="0.0" y="388" width="414" height="524"/>
@@ -28,12 +25,15 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-xJ-Ldc">
                                         <rect key="frame" x="30" y="30" width="98" height="39"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
-                                        <color key="highlightedColor" red="0.023529411760000001" green="0.019607843140000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="mdU-xJ-Ldc" firstAttribute="leading" secondItem="KJZ-x1-aWW" secondAttribute="leading" constant="30" id="Idw-gO-YOo"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mdU-xJ-Ldc" secondAttribute="trailing" constant="20" symbolic="YES" id="mXq-A0-2Li"/>
                                     <constraint firstItem="mdU-xJ-Ldc" firstAttribute="top" secondItem="KJZ-x1-aWW" secondAttribute="top" constant="30" id="tiy-8f-T6d"/>
                                 </constraints>
                             </view>
@@ -52,13 +52,14 @@
                                 <color key="highlightedColor" red="0.023529411760000001" green="0.019607843140000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.023529411764705882" green="0.019607843137254902" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qE8-ee-uSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Wqr-Rd-alV"/>
                             <constraint firstItem="d1C-Bx-nbI" firstAttribute="leading" secondItem="qE8-ee-uSY" secondAttribute="trailing" constant="8" id="Wtf-Cs-tB5"/>
                             <constraint firstItem="KJZ-x1-aWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XD6-p0-Qxq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KJZ-x1-aWW" secondAttribute="trailing" id="YCA-c5-Dvk"/>
                             <constraint firstItem="qE8-ee-uSY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="as5-2Q-fCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d1C-Bx-nbI" secondAttribute="trailing" symbolic="YES" id="dQd-dQ-yrb"/>
                             <constraint firstItem="2vT-a6-LrI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="gHb-tL-IoW"/>
                             <constraint firstItem="2vT-a6-LrI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kNv-n3-cwZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2vT-a6-LrI" secondAttribute="bottom" id="lpK-LW-fM3"/>

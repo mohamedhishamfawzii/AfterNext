@@ -7,3 +7,6 @@
 //
 
 import Foundation
+class Manager {
+   public static var areas :[String] = [String]()
+}

@@ -13,7 +13,7 @@ class AdminScanViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var locationSearchBar: UISearchBar!
     @IBOutlet weak var searchView: UIView!
-    var bookings:[Booking] = []
+    var bookings:[Booking] = [Booking]()
     
     var collectionRef:CollectionReference!
     var bookingNib = UINib(nibName: "BookingsTableViewCell", bundle: nil)
@@ -25,36 +25,43 @@ class AdminScanViewController: UIViewController {
         self.tableView.separatorStyle = .none
         self.tableView.bounces=false
         Firestore.firestore().collection("Bookings")
-            .addSnapshotListener { querySnapshot, error in
-                self.bookings.removeAll()
+            .addSnapshotListener { [weak self] querySnapshot, error in
                 if let error = error {
                     print("Error retreiving collection: \(error)")
                 }
-                self.getBookings()
-                self.tableView.reloadData()
+                self?.getBookings()
+                self?.tableView.reloadData()
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getBookings()
-    }
     
     func getBookings() {
-        collectionRef.getDocuments{ (snapshot,err) in
+        bookings = [Booking]()
+        collectionRef.getDocuments{ [weak self] (snapshot,err) in
             if let err=err{
                 print(err)
             }else{
                 for document in snapshot!.documents{
-//                    self.bookings.removeAll()
                     let bookingData = document.data()
+                    if ((bookingData["status"] as? String ) == "Waiting Approval" || (bookingData["status"] as? String ) == "waiting for approval" ){
                     let name = bookingData["arenaName"] as? String ?? "blank"
                     print(name)
                     let location = bookingData["arenaLocation"] as? String ?? "blank"
-                    let booking = Booking(arena: name,location: location,hour:bookingData["time"] as? String ?? "blank", arenaNumber: bookingData["arenaNumber"] as? String ?? "blank")
+                    let booking = Booking(arena: name,location: location,hour:bookingData["time"] as? String ?? "blank", arenaNumber: bookingData["arenaPhone"] as? String ?? "blank",playerNumber:bookingData["playerMobile"] as? String ?? "blank", playerName:bookingData["playerName"] as? String ?? "hisham",timeStamp: bookingData["timeStamp"]as? String ?? "couldn't get time" )
                     booking.id = document.documentID
-                    self.bookings.append(booking)
-                }
-                self.tableView.reloadData()
+                        var added = false
+                        for bookingg in self?.bookings ?? [Booking]() {
+                            if bookingg.id == booking.id{
+                                added = true
+                            }
+                        }
+                        if !added{
+                            self?.bookings.append(booking)}
+                    }}
+                
+                 self?.bookings =  self?.bookings.sorted { $0.arenaName < $1.arenaName } ?? self?.bookings ?? [Booking]()
+                
+                self?.tableView.reloadData()
                 
             }
         }
@@ -62,16 +69,7 @@ class AdminScanViewController: UIViewController {
     
     
     func config(){
-        let v = locationSearchBar.subviews.first!.subviews[0]
-        v.removeFromSuperview()
-        let textField = locationSearchBar.value(forKey: "searchField") as! UITextField
-        textField.borderStyle = .none
-        searchView.layer.shadowRadius = 0.3
-        searchView.layer.shadowColor = UIColor(red: 229/255, green: 236/255, blue: 237/255, alpha: 1).cgColor
-        searchView.layer.shadowOpacity = 1
-        searchView.layer.shadowOffset = CGSize(width: 1, height: 3.5)
-        searchView.layer.borderWidth = 0.25
-        searchView.layer.borderColor=UIColor.gray.cgColor
+    
         collectionRef = Firestore.firestore().collection("Bookings")
         
     }
@@ -88,12 +86,20 @@ extension AdminScanViewController:UITableViewDataSource,UITableViewDelegate{
         currentCell.arenaLabel.text = bookings[indexPath.row].arenaName
         currentCell.locationLabel.text = bookings[indexPath.row].arenaLocation
         currentCell.time.text = bookings[indexPath.row].hour
+        currentCell.stamp.text = bookings[indexPath.row].timeStamp
         currentCell.index=indexPath.row
         currentCell.delegate=self
         return currentCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 120
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: bookings[indexPath.row].playerName, message: ("Player:"+bookings[indexPath.row].playerMobile + "                     Arena :"+bookings[indexPath.row].arenaNumber), preferredStyle: .alert)
+                             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                                 NSLog("The \"OK\" alert occured.")
+                             }))
+                             self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -110,6 +116,11 @@ extension AdminScanViewController:bookingProtocol{
                         document.reference.updateData([
                             "status": "approved"
                             ])
+                        let alert = UIAlertController(title: "Done", message: "Booking Approved", preferredStyle: .alert)
+                                             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                                                 NSLog("The \"OK\" alert occured.")
+                                             }))
+                                             self.present(alert, animated: true, completion: nil)
                     }
                     
                 }
@@ -132,6 +143,12 @@ extension AdminScanViewController:bookingProtocol{
                         document.reference.updateData([
                             "status": "declined"
                             ])
+                        
+                        let alert = UIAlertController(title: "Done", message: "Booking Declined", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                            NSLog("The \"OK\" alert occured.")
+                        }))
+                        self.present(alert, animated: true, completion: nil)
                     }
                     
                 }

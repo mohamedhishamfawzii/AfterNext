@@ -8,6 +8,8 @@ target 'After Next Player' do
 pod 'Cosmos'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'lottie-ios'
+pod 'SwiftGifOrigin', '~> 1.7.0'
   # Pods for After Next Player
 
 end

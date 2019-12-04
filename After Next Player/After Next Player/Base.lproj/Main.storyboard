@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BU4-vk-mij">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BU4-vk-mij">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +10,7 @@
         <!--After Next-->
         <scene sceneID="3Rg-Y1-BDJ">
             <objects>
-                <viewController id="BU4-vk-mij" customClass="RegViewController" customModule="After_Next_Player" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BU4-vk-mij" customClass="RegViewController" customModule="After_Next" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="After Next" id="r38-yI-BYK"/>
                     <connections>
                         <segue destination="gjx-da-Zdc" kind="show" identifier="show" id="qJn-dc-MdU"/>
@@ -21,19 +18,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeK-Rv-oDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="-23"/>
+            <point key="canvasLocation" x="1014" y="-100"/>
         </scene>
-        <!--Player Home View-->
+        <!--After Next-->
         <scene sceneID="Mnf-gf-hNS">
             <objects>
-                <viewController restorationIdentifier="player" storyboardIdentifier="player" id="A5X-vP-AI8" customClass="PlayerHomeView" customModule="After_Next_Player" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="player" storyboardIdentifier="player" id="A5X-vP-AI8" customClass="PlayerHomeView" customModule="After_Next" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LzP-jy-AcJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fef-x7-21n"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fDC-Hk-lKj"/>
+                    <navigationItem key="navigationItem" title="After Next" largeTitleDisplayMode="always" id="fDC-Hk-lKj">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="ELr-Tb-zdG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyp-39-SvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,11 +41,21 @@
         <!--Navigation Controller-->
         <scene sceneID="dBN-VH-d8C">
             <objects>
-                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="gjx-da-Zdc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="gjx-da-Zdc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bwi-sL-TT3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Bwi-sL-TT3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.094291001560000004" green="0.9049140215" blue="0.66734701399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

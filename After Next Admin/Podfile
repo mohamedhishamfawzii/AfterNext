@@ -8,7 +8,6 @@ target 'After Next Admin' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
-  pod 'Firebase/Messaging'
   # Pods for After Next Admin
 
 end

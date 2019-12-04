@@ -15,10 +15,12 @@ protocol bookingProtocol {
 class BookingsTableViewCell: UITableViewCell {
     @IBOutlet weak var timeSquare: UIView!
 
-    @IBOutlet weak var time: UILabel!
+
+    @IBOutlet weak var stamp: UILabel!
     
     @IBOutlet weak var arenaLabel: UILabel!
     
+    @IBOutlet weak var time: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     var delegate:bookingProtocol?
